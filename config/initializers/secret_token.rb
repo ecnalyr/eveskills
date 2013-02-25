@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Eveskills::Application.config.secret_token = 'ce293d422fdf74fbca4421376e03d2b5bc40af11ab15b7989c9c8d1deb358a0f1978da53178510ece77e92fe52ab0bea53771d3dd62bb0202f6681b20af4386d'
+Eveskills::Application.config.secret_token = 'e73235d0f97df142b056f37d3d45ee6b532a99ab30f4374f8a60d975fe8294eee8daa52184f76332cdb64db6687c62d5669a381bfe86fe8491f4382353f8d948'
