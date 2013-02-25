@@ -29,6 +29,8 @@ GEM
       i18n (~> 0.6)
       multi_json (~> 1.0)
     addressable (2.3.3)
+    annotate (2.5.0)
+      rake
     arel (3.0.2)
     bcrypt-ruby (3.0.1)
     better_errors (0.7.0)
@@ -191,6 +193,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  annotate (>= 2.5.0)
   better_errors (>= 0.6.0)
   binding_of_caller (>= 0.7.1)
   cancan (>= 1.6.8)
