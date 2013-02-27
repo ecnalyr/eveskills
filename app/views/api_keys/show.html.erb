@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Id:</b>
+  <%= @api_key.id %>
+</p>
+
+<p>
+  <b>Eve Api Id:</b>
+  <%= @api_key.eve_api_identifier %>
+</p>
+
+<p>
+  <b>Verification code:</b>
+  <%= @api_key.verification_code %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @api_key.user.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_api_key_path(@api_key) %> |
+<%= link_to 'Back', api_keys_path %>

@@ -2,8 +2,8 @@
 
 FactoryGirl.define do
   factory :api_key do
-    id "MyString"
+    eve_api_identifier "MyString"
     verification_code "MyString"
-    user nil
+    user
   end
 end

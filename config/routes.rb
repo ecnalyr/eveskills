@@ -1,4 +1,7 @@
 Eveskills::Application.routes.draw do
+  resources :api_keys
+
+
   authenticated :user do
     root :to => 'home#index'
   end
