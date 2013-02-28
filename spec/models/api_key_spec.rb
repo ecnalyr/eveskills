@@ -18,7 +18,7 @@ describe "Api_key" do
   verification_code = "N918tK4e6MH1D6R61JjPuyxsylg9o2TIrdtuAK6mwhNW3zWy1KTZH7946jY2aV1L"
 
   context "#character_name" do
-    it "should have a character name" do
+    it "should have a character name", :vcr do
       api_key = FactoryGirl.create(:api_key, :eve_api_identifier => eve_api_identifier, :verification_code => verification_code)
       api_key.character_name.should == "Mrkt Obsrvr"
       api_key.character_name.should_not be_nil
@@ -26,7 +26,7 @@ describe "Api_key" do
   end
   
   context "#attributes" do
-    it "should have intelligence, memory, charimsa, perception, and willpower attributes" do
+    it "should have intelligence, memory, charimsa, perception, and willpower attributes", :vcr do
       api_key = FactoryGirl.create(:api_key, :eve_api_identifier => eve_api_identifier, :verification_code => verification_code)
       api_key.attributes.should == ["intelligence: 20", "memory: 25", "charisma: 23", "perception: 16", "willpower: 15"]
     end
