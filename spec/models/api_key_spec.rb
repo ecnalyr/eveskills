@@ -17,7 +17,7 @@ describe "Products" do
   context "#character_name" do
     it "should have a character name" do
       api_key = FactoryGirl.create(:api_key, :eve_api_identifier => "1867200", :verification_code => "oReWk9nG5QutSKn03RINpBXajnDtU2egla3uTr4dLQDV4kVTeQodWgy1He7ECeU4")
-      pp api_key.character_name
+      # api_key.character_name.should == "Alba Tross"
       api_key.character_name.should_not be_nil
     end  
   end
