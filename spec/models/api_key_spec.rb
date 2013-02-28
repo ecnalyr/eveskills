@@ -14,13 +14,13 @@ require 'spec_helper'
 
 describe "Api_key" do
   # Eve api keys should have an access mask of 393224
-  eve_api_identifier = 1878387
-  verification_code = "N918tK4e6MH1D6R61JjPuyxsylg9o2TIrdtuAK6mwhNW3zWy1KTZH7946jY2aV1L"
+  eve_api_identifier = 1867200
+  verification_code = "oReWk9nG5QutSKn03RINpBXajnDtU2egla3uTr4dLQDV4kVTeQodWgy1He7ECeU4"
 
   context "#character_name" do
     it "should have a character name", :vcr do
       api_key = FactoryGirl.create(:api_key, :eve_api_identifier => eve_api_identifier, :verification_code => verification_code)
-      api_key.character_name.should == "Mrkt Obsrvr"
+      api_key.character_name.should == "Alba Tross"
       api_key.character_name.should_not be_nil
     end  
   end
@@ -28,7 +28,7 @@ describe "Api_key" do
   context "#attributes" do
     it "should have intelligence, memory, charimsa, perception, and willpower attributes", :vcr do
       api_key = FactoryGirl.create(:api_key, :eve_api_identifier => eve_api_identifier, :verification_code => verification_code)
-      api_key.attributes.should == ["intelligence: 20", "memory: 25", "charisma: 23", "perception: 16", "willpower: 15"]
+      api_key.attributes.should == ["intelligence: 27", "memory: 21", "charisma: 17", "perception: 17", "willpower: 17"]
     end
   end
 

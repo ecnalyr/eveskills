@@ -19,19 +19,19 @@ class ApiKey < ActiveRecord::Base
   attr_accessible :user_id
 
     def character_name
-      api = get_api_results
+      api = get_api_results_for("CharacterSheet")
       character_name = get_character_name(api)
     end
 
     def attributes
-        api = get_api_results
+        api = get_api_results_for("CharacterSheet")
         attributes = get_attributes(api)
     end
 
     private
 
-        def get_api_results
-          api_reults = Nokogiri.XML(open("https://api.eveonline.com/char/CharacterSheet.xml.aspx?keyID=#{self.eve_api_identifier}&vCode=#{self.verification_code}"))    
+        def get_api_results_for(specific_api)
+          api_reults = Nokogiri.XML(open("https://api.eveonline.com/char/#{specific_api}.xml.aspx?keyID=#{self.eve_api_identifier}&vCode=#{self.verification_code}"))    
         end
 
         def get_character_name(api)
