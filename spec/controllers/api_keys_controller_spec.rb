@@ -119,7 +119,7 @@ describe ApiKeysController do
 
       it "assigns the requested api_key as @api_key" do
         api_key = FactoryGirl.create(:api_key)
-        put :update, {:id => api_key.to_param, :api_key => FactoryGirl.attributes_for(:api_key)}
+        put :update, {:id => api_key.to_param, :api_key => { "id" => "YourString"}}
         assigns(:api_key).should eq(api_key)
       end
 
