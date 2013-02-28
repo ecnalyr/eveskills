@@ -1,0 +1,71 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.eveonline.com/char/SkillInTraining.xml.aspx?keyID=1867200&vCode=oReWk9nG5QutSKn03RINpBXajnDtU2egla3uTr4dLQDV4kVTeQodWgy1He7ECeU4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      transfer-encoding:
+      - chunked
+      content-type:
+      - application/xml; charset=utf-8
+      date:
+      - Thu, 28 Feb 2013 17:35:42 GMT
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version='1.0' encoding='UTF-8'?>\r\n<eveapi version=\"2\">\r\n
+        \ <currentTime>2013-02-28 17:35:42</currentTime>\r\n  <result>\r\n    <currentTQTime
+        offset=\"0\">2013-02-28 17:35:42</currentTQTime>\r\n    <trainingEndTime>2013-03-01
+        13:55:06</trainingEndTime>\r\n    <trainingStartTime>2013-02-28 13:34:07</trainingStartTime>\r\n
+        \   <trainingTypeID>3320</trainingTypeID>\r\n    <trainingStartSP>8000</trainingStartSP>\r\n
+        \   <trainingDestinationSP>45255</trainingDestinationSP>\r\n    <trainingToLevel>4</trainingToLevel>\r\n
+        \   <skillInTraining>1</skillInTraining>\r\n  </result>\r\n  <cachedUntil>2013-02-28
+        18:28:15</cachedUntil>\r\n</eveapi>"
+    http_version: '1.1'
+  recorded_at: Thu, 28 Feb 2013 17:35:42 GMT
+- request:
+    method: get
+    uri: https://api.eveonline.com/char/SkillInTraining.xml.aspx?keyID=1867200&vCode=oReWk9nG5QutSKn03RINpBXajnDtU2egla3uTr4dLQDV4kVTeQodWgy1He7ECeU4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      transfer-encoding:
+      - chunked
+      content-type:
+      - application/xml; charset=utf-8
+      date:
+      - Thu, 28 Feb 2013 17:35:42 GMT
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version='1.0' encoding='UTF-8'?>\r\n<eveapi version=\"2\">\r\n
+        \ <currentTime>2013-02-28 17:35:42</currentTime>\r\n  <result>\r\n    <currentTQTime
+        offset=\"0\">2013-02-28 17:35:42</currentTQTime>\r\n    <trainingEndTime>2013-03-01
+        13:55:06</trainingEndTime>\r\n    <trainingStartTime>2013-02-28 13:34:07</trainingStartTime>\r\n
+        \   <trainingTypeID>3320</trainingTypeID>\r\n    <trainingStartSP>8000</trainingStartSP>\r\n
+        \   <trainingDestinationSP>45255</trainingDestinationSP>\r\n    <trainingToLevel>4</trainingToLevel>\r\n
+        \   <skillInTraining>1</skillInTraining>\r\n  </result>\r\n  <cachedUntil>2013-02-28
+        18:28:15</cachedUntil>\r\n</eveapi>"
+    http_version: '1.1'
+  recorded_at: Thu, 28 Feb 2013 17:35:42 GMT
+recorded_with: VCR 2.4.0

@@ -24,8 +24,20 @@ class ApiKey < ActiveRecord::Base
     end
 
     def attributes
-        api = get_api_results_for("CharacterSheet")
-        attributes = get_attributes(api)
+      api = get_api_results_for("CharacterSheet")
+      attributes = get_attributes(api)
+    end
+
+    def skill_in_training?
+      api = get_api_results_for("SkillInTraining")
+      is_skill_in_training(api)
+    end
+
+    def name_of_skill_in_training
+      api = get_api_results_for("SkillInTraining")
+      if skill_in_training?
+        get_name_of_skill_in_training(api)
+      end
     end
 
     private
@@ -39,14 +51,20 @@ class ApiKey < ActiveRecord::Base
         end
 
         def get_attributes(api)
-          # attributes = []
           api.xpath('//attributes/*').each_with_object([]) do |n, ary|
             ary << "#{n.name}: #{n.text}"
           end
-          
+
           # the following line will return an object with symbols instead of a string array, but the first element is a \n character
           #   api.at('attributes').children(:nth-child(1).each_with_object({}){ |o,h| h[o.name.to_sym] = o.text }
+        end
 
+        def is_skill_in_training(api)
+          api.xpath("//skillInTraining").inner_text.to_bool
+        end
+
+        def get_name_of_skill_in_training(api)
+          api.xpath("//trainingTypeID").inner_text
         end
 
 
