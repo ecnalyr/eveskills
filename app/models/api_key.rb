@@ -43,8 +43,9 @@ class ApiKey < ActiveRecord::Base
           api.xpath('//attributes/*').each_with_object([]) do |n, ary|
             ary << "#{n.name}: #{n.text}"
           end
-        # the following line will return an object with symbols instead of a string array, but the first element is a \n character
-        #   api.at('attributes').children(:nth-child(1).each_with_object({}){ |o,h| h[o.name.to_sym] = o.text }
+          
+          # the following line will return an object with symbols instead of a string array, but the first element is a \n character
+          #   api.at('attributes').children(:nth-child(1).each_with_object({}){ |o,h| h[o.name.to_sym] = o.text }
 
         end
 
