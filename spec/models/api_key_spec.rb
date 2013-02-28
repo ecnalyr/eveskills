@@ -60,5 +60,3 @@ describe "Api_key" do
   end
 
 end
-
-

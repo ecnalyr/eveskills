@@ -69,9 +69,3 @@ class ApiKey < ActiveRecord::Base
 
 
 end
-
-# class Nokogiri::XML::Document
-#   def remove_empty_lines!
-#     self.xpath("//text()").each { |text| text.content = text.content.gsub(/\n(\s*\n)+/,"\n") }; self
-#   end
-# end
