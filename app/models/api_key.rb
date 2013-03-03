@@ -9,6 +9,7 @@
 #  updated_at         :datetime         not null
 #  eve_api_identifier :string(255)
 #
+require 'Nokogiri'
 
 class ApiKey < ActiveRecord::Base
   validates_presence_of :user_id, :verification_code, :eve_api_identifier
@@ -23,7 +24,7 @@ class ApiKey < ActiveRecord::Base
       character_name = get_character_name(api)
     end
 
-    def attributes
+    def character_attributes
       api = get_api_results_for("CharacterSheet")
       attributes = get_attributes(api)
     end
@@ -51,12 +52,7 @@ class ApiKey < ActiveRecord::Base
         end
 
         def get_attributes(api)
-          api.xpath('//attributes/*').each_with_object([]) do |n, ary|
-            ary << "#{n.name}: #{n.text}"
-          end
-
-          # the following line will return an object with symbols instead of a string array, but the first element is a \n character
-          #   api.at('attributes').children(:nth-child(1).each_with_object({}){ |o,h| h[o.name.to_sym] = o.text }
+          api.at('attributes').children.each_with_object({}){ |o,h| h[o.name.to_sym] = o.text }
         end
 
         def is_skill_in_training(api)
@@ -66,6 +62,4 @@ class ApiKey < ActiveRecord::Base
         def get_name_of_skill_in_training(api)
           api.xpath("//trainingTypeID").inner_text
         end
-
-
 end

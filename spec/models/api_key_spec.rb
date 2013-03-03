@@ -28,10 +28,10 @@ describe "Api_key" do
     end  
   end
   
-  context "#attributes" do
+  context "#character_attributes" do
     it "should have intelligence, memory, charimsa, perception, and willpower attributes", :vcr do
       api_key = FactoryGirl.create(:api_key, :eve_api_identifier => eve_api_identifier, :verification_code => verification_code)
-      api_key.attributes.should == ["intelligence: 27", "memory: 21", "charisma: 17", "perception: 17", "willpower: 17"]
+      api_key.character_attributes.should == {:text=>"\n    ", :intelligence=>"27", :memory=>"21", :charisma=>"17", :perception=>"17", :willpower=>"17"}
     end
   end
 

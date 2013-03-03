@@ -22,6 +22,13 @@ describe ApiKeysController do
 
   login_user
 
+  # Eve api keys should have an access mask of 393224
+  eve_api_identifier = "1867200"
+  verification_code = "oReWk9nG5QutSKn03RINpBXajnDtU2egla3uTr4dLQDV4kVTeQodWgy1He7ECeU4"
+
+  eve_api_identifier_no_skill_in_training = "1878387"
+  verification_code_no_skill_in_training = "N918tK4e6MH1D6R61JjPuyxsylg9o2TIrdtuAK6mwhNW3zWy1KTZH7946jY2aV1L"
+
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
   # ApiKeysController. Be sure to keep this updated too.
@@ -113,19 +120,25 @@ describe ApiKeysController do
         # specifies that the ApiKey created on the previous line
         # receives the :update_attributes message with whatever params are
         # submitted in the request.
-        ApiKey.any_instance.should_receive(:update_attributes).with({ "id" => "MyString"})
-        put :update, {:id => api_key.to_param, :api_key => { "id" => "MyString" }}
+        ApiKey.any_instance.should_receive(:update_attributes).with({ "verification_code" => "MyString"})
+        put :update, {:id => api_key.to_param, :api_key => { "verification_code" => "MyString" }}
       end
 
-      it "assigns the requested api_key as @api_key" do
+      it "assigns the requested api_key as @api_key", :vcr, record: :all, do
         api_key = FactoryGirl.create(:api_key)
-        put :update, {:id => api_key.to_param, :api_key => { "id" => "YourString"}}
+        put :update, {:id => api_key.to_param, 
+            :api_key => { "eve_api_identifier" => eve_api_identifier, 
+                          "verification_code" => verification_code, 
+                          "user_id" => "1"}}
         assigns(:api_key).should eq(api_key)
       end
 
-      it "redirects to the api_key" do
+      it "redirects to the api_key", :vcr, record: :all, do
         api_key = FactoryGirl.create(:api_key)
-        put :update, {:id => api_key.to_param, :api_key => FactoryGirl.attributes_for(:api_key)}
+        put :update, {:id => api_key.id.to_param,
+            :api_key => { "eve_api_identifier" => eve_api_identifier, 
+                            "verification_code" => verification_code, 
+                            "user_id" => "1"}}
         response.should redirect_to(api_key)
       end
     end
@@ -135,7 +148,8 @@ describe ApiKeysController do
         api_key = FactoryGirl.create(:api_key)
         # Trigger the behavior that occurs when invalid params are submitted
         ApiKey.any_instance.stub(:save).and_return(false)
-        put :update, {:id => api_key.to_param, :api_key => { "id" => "invalid value" }}
+        # put :update, {:id => api_key.to_param, :api_key => { "verification_code" => "invalid value" }}
+        put :update, {:id => api_key.to_param, :api_key => { "verification_code" => "YourString", "user_id" => "1"}}
         assigns(:api_key).should eq(api_key)
       end
 
@@ -143,7 +157,7 @@ describe ApiKeysController do
         api_key = FactoryGirl.create(:api_key)
         # Trigger the behavior that occurs when invalid params are submitted
         ApiKey.any_instance.stub(:save).and_return(false)
-        put :update, {:id => api_key.to_param, :api_key => { "id" => "invalid value" }}
+        put :update, {:id => api_key.to_param, :api_key => { "verification_code" => "invalid value" }}
         response.should render_template("edit")
       end
     end

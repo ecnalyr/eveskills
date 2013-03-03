@@ -5,7 +5,9 @@ Feature: save_api
     I want to be able to input my api ID and Verification Code
     So I can view my character's skill information
 
-Given a logged in user
+Background:
+
+    Given a logged in user
 
 Scenario: User submits a new eve character skill api key
     When user visits the add new character page
