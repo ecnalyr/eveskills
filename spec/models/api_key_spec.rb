@@ -22,7 +22,9 @@ describe "Api_key" do
 
   context "#character_name" do
     it "should have a character name", :vcr do
-      api_key = FactoryGirl.create(:api_key, :eve_api_identifier => eve_api_identifier, :verification_code => verification_code)
+      api_key = FactoryGirl.create(:api_key, 
+                                    :eve_api_identifier => eve_api_identifier, 
+                                    :verification_code => verification_code)
       api_key.character_name.should == "Alba Tross"
       api_key.character_name.should_not be_nil
     end  
@@ -30,31 +32,42 @@ describe "Api_key" do
   
   context "#character_attributes" do
     it "should have intelligence, memory, charimsa, perception, and willpower attributes", :vcr do
-      api_key = FactoryGirl.create(:api_key, :eve_api_identifier => eve_api_identifier, :verification_code => verification_code)
-      api_key.character_attributes.should == {:text=>"\n    ", :intelligence=>"27", :memory=>"21", :charisma=>"17", :perception=>"17", :willpower=>"17"}
+      api_key = FactoryGirl.create(:api_key, 
+                                    :eve_api_identifier => eve_api_identifier, 
+                                    :verification_code => verification_code)
+      api_key.character_attributes.should == 
+      {:text=>"\n    ", :intelligence=>"27", :memory=>"21", :charisma=>"17", :perception=>"17", :willpower=>"17"}
     end
   end
 
   context "#skill_in_training" do
     it "should return 0 if there is no skill in training", :vcr do
-      api_key = FactoryGirl.create(:api_key, :eve_api_identifier => eve_api_identifier_no_skill_in_training, :verification_code => verification_code_no_skill_in_training)
+      api_key = FactoryGirl.create(:api_key, 
+                                    :eve_api_identifier => eve_api_identifier_no_skill_in_training, 
+                                    :verification_code => verification_code_no_skill_in_training)
       api_key.skill_in_training?.should == false
     end
 
     it "should return 1 if there is a skill in training", :vcr do
-      api_key = FactoryGirl.create(:api_key, :eve_api_identifier => eve_api_identifier, :verification_code => verification_code)
+      api_key = FactoryGirl.create(:api_key, 
+                                    :eve_api_identifier => eve_api_identifier, 
+                                    :verification_code => verification_code)
       api_key.skill_in_training?.should == true
     end
   end
 
   context "#name_of_skill_in_training", :vcr do
     it "should return the trainingTypeID of a skill if there is a skill_in_training" do
-      api_key = FactoryGirl.create(:api_key, :eve_api_identifier => eve_api_identifier, :verification_code => verification_code)
+      api_key = FactoryGirl.create(:api_key, 
+                                    :eve_api_identifier => eve_api_identifier, 
+                                    :verification_code => verification_code)
       api_key.name_of_skill_in_training.should == "3320"
     end
 
     it "should return nil if there is no skill in training", :vcr do
-      api_key = FactoryGirl.create(:api_key, :eve_api_identifier => eve_api_identifier_no_skill_in_training, :verification_code => verification_code_no_skill_in_training)
+      api_key = FactoryGirl.create(:api_key, 
+                                    :eve_api_identifier => eve_api_identifier_no_skill_in_training, 
+                                    :verification_code => verification_code_no_skill_in_training)
       api_key.name_of_skill_in_training.should be nil
     end      
   end
