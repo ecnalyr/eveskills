@@ -124,7 +124,7 @@ describe ApiKeysController do
         put :update, {:id => api_key.to_param, :api_key => { "verification_code" => "MyString" }}
       end
 
-      it "assigns the requested api_key as @api_key", :vcr, record: :all, do
+      it "assigns the requested api_key as @api_key", :vcr do
         api_key = FactoryGirl.create(:api_key)
         put :update, {:id => api_key.to_param, 
             :api_key => { "eve_api_identifier" => eve_api_identifier, 
@@ -133,7 +133,7 @@ describe ApiKeysController do
         assigns(:api_key).should eq(api_key)
       end
 
-      it "redirects to the api_key", :vcr, record: :all, do
+      it "redirects to the api_key", :vcr do
         api_key = FactoryGirl.create(:api_key)
         put :update, {:id => api_key.id.to_param,
             :api_key => { "eve_api_identifier" => eve_api_identifier, 

@@ -28,4 +28,5 @@ gem 'meta_request', :group => :development
 group :test do
   gem 'vcr'
   gem 'fakeweb'
+  gem "cucumber-rails", :require => false
 end
