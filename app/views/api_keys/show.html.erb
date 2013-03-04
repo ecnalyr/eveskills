@@ -20,6 +20,25 @@
   <%= @api_key.user.name %>
 </p>
 
+<p>
+    <b>Character Name:<b>
+    <%= @api_key.character_name %>
+</p>
+
+<p>
+    <b>Character attributes:<b>
+    <%= @api_key.character_attributes %>
+</p>
+
+<p>
+    <b>Skill in training?:<b>
+    <%= @api_key.skill_in_training? %>
+</p>
+
+<p>
+    <b>Name of skill in training:<b>
+    <%= @api_key.name_of_skill_in_training %>
+</p>
 
 <%= link_to 'Edit', edit_api_key_path(@api_key) %> |
 <%= link_to 'Back', api_keys_path %>
