@@ -1,9 +1,9 @@
 module LoginSteps
   def login(email, password)
-    visit('users/sign_in')
+    visit(new_user_session_path)
     fill_in('Email', :with => email)
-    fill_in('Passsword', :with => password)
-    click_button('Sign In')
+    fill_in('Password', :with => password)
+    click_button('Sign in')
   end
 end
 
@@ -15,5 +15,17 @@ Given /^a logged in user$/ do
 end
 
 When /^user visits the add new character page$/ do
-  visit(api_key_create_path)
+  visit(new_api_key_path)
+end
+
+When /^user inputs "(.*?)" as their "(.*?)"$/ do |value, field|
+  fill_in(field, :with => value)
+end
+
+When /^user clicks "(.*?)"$/ do |button|
+  click_button(button)
+end
+
+Then /^user should be presented with "(.*?)" as their "(.*?)"$/ do |value, field|
+  page.has_field?(field, :with => value)
 end
