@@ -76,6 +76,6 @@ class ApiKey < ActiveRecord::Base
       end
 
       def get_skill_training_end_time(api)
-        api.xpath("//trainingEndTime").inner_text
+        Time.zone.parse(api.xpath("//trainingEndTime").inner_text).utc
       end
 end

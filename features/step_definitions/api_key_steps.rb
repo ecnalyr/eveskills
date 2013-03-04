@@ -14,8 +14,16 @@ Given /^a logged in user$/ do
   login(@user.email, @user.password)
 end
 
+Given /^an api_key with a skill in training$/ do
+  @api = FactoryGirl.create(:api_key, :skill_is_training)
+end
+
 When /^user visits the add new character page$/ do
   visit(new_api_key_path)
+end
+
+When /^user visits their api_key show page$/ do
+  visit(api_key_path(:id => 1))
 end
 
 When /^user inputs "(.*?)" as their "(.*?)"$/ do |value, field|
@@ -33,3 +41,4 @@ end
 Then /^the user should see "(.*?)"$/ do |text|
   page.should have_text(text)
 end
+

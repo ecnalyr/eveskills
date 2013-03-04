@@ -63,7 +63,7 @@ describe "Api_key", :vcr do
   context "#current_skill_training_end_time" do
     it "should return a training end time if there is a skill in training" do
       api_key = FactoryGirl.create(:api_key, :skill_is_training)
-      api_key.current_skill_training_end_time.should == "2013-03-06 22:04:00"
+      api_key.current_skill_training_end_time.should == "2013-03-06 22:04:00 UTC"
     end
 
     it "should return nil if there is no skill in training" do
