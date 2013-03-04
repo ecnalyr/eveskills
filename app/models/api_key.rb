@@ -52,7 +52,12 @@ class ApiKey < ActiveRecord::Base
         end
 
         def get_attributes(api)
-          api.at('attributes').children.each_with_object({}){ |o,h| h[o.name.to_sym] = o.text }
+          result = api.at('attributes').children.each_with_object({}){ |o,h| h[o.name.to_sym] = o.text }
+          # We have to delete the element :text from the results hash because
+          # I have not found a more elegant way to collect the data without
+          # :text element in the first place
+          result.delete(:text)
+          result
         end
 
         def is_skill_in_training(api)

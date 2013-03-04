@@ -36,7 +36,7 @@ describe "Api_key" do
                                     :eve_api_identifier => eve_api_identifier, 
                                     :verification_code => verification_code)
       api_key.character_attributes.should == 
-      {:text=>"\n    ", :intelligence=>"27", :memory=>"21", :charisma=>"17", :perception=>"17", :willpower=>"17"}
+      {:intelligence=>"27", :memory=>"21", :charisma=>"17", :perception=>"17", :willpower=>"17"}
     end
   end
 
