@@ -72,4 +72,11 @@ describe "Api_key", :vcr do
     end
   end
 
+  context "#training_queue" do
+    it "should return the list of skills that are in training" do
+      api_key = FactoryGirl.create(:api_key, :skill_is_training)
+      api_key.training_queue.should == 
+      [{:queuePosition=>"0", :typeID=>"20495", :level=>"3", :startSP=>"2829", :endSP=>"16000", :startTime=>"2013-03-04 16:25:50", :endTime=>"2013-03-05 01:02:20"}, {:queuePosition=>"1", :typeID=>"19767", :level=>"4", :startSP=>"40000", :endSP=>"226275", :startTime=>"2013-03-05 01:02:20", :endTime=>"2013-03-07 06:40:31"}]
+    end
+  end
 end

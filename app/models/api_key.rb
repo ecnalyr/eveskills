@@ -48,6 +48,13 @@ class ApiKey < ActiveRecord::Base
     end
   end
 
+  def training_queue
+    api = get_api_results_for("SkillQueue")
+    if skill_in_training?
+      get_training_queue(api)
+    end
+  end
+
   private
 
       def get_api_results_for(specific_api)
@@ -77,5 +84,17 @@ class ApiKey < ActiveRecord::Base
 
       def get_skill_training_end_time(api)
         Time.zone.parse(api.xpath("//trainingEndTime").inner_text).utc
+      end
+
+      def get_training_queue(api)
+        queue = []
+        api.xpath("//row").each do |skill_in_queue|
+          skill = {}
+          skill_in_queue.attributes.each do |details|
+            skill[details[0].to_s.to_sym] = details[1].to_s
+          end
+          queue << skill
+        end
+        queue
       end
 end
