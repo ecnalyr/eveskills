@@ -29,3 +29,7 @@ end
 Then /^user should be presented with "(.*?)" as their "(.*?)"$/ do |value, field|
   page.has_field?(field, :with => value)
 end
+
+Then /^the user should see "(.*?)"$/ do |text|
+  page.should have_text(text)
+end
