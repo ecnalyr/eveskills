@@ -1,0 +1,63 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.eveonline.com/char/SkillInTraining.xml.aspx?keyID=1878387&vCode=N918tK4e6MH1D6R61JjPuyxsylg9o2TIrdtuAK6mwhNW3zWy1KTZH7946jY2aV1L
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      transfer-encoding:
+      - chunked
+      content-type:
+      - application/xml; charset=utf-8
+      date:
+      - Mon, 04 Mar 2013 14:39:01 GMT
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version='1.0' encoding='UTF-8'?>\r\n<eveapi version=\"2\">\r\n
+        \ <currentTime>2013-03-04 14:39:01</currentTime>\r\n  <result>\r\n    <currentTQTime
+        offset=\"0\">2013-03-04 14:39:01</currentTQTime>\r\n    <skillInTraining>0</skillInTraining>\r\n
+        \ </result>\r\n  <cachedUntil>2013-03-04 15:13:18</cachedUntil>\r\n</eveapi>"
+    http_version: '1.1'
+  recorded_at: Mon, 04 Mar 2013 14:39:02 GMT
+- request:
+    method: get
+    uri: https://api.eveonline.com/char/SkillInTraining.xml.aspx?keyID=1878387&vCode=N918tK4e6MH1D6R61JjPuyxsylg9o2TIrdtuAK6mwhNW3zWy1KTZH7946jY2aV1L
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      transfer-encoding:
+      - chunked
+      content-type:
+      - application/xml; charset=utf-8
+      date:
+      - Mon, 04 Mar 2013 14:39:02 GMT
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version='1.0' encoding='UTF-8'?>\r\n<eveapi version=\"2\">\r\n
+        \ <currentTime>2013-03-04 14:39:02</currentTime>\r\n  <result>\r\n    <currentTQTime
+        offset=\"0\">2013-03-04 14:39:02</currentTQTime>\r\n    <skillInTraining>0</skillInTraining>\r\n
+        \ </result>\r\n  <cachedUntil>2013-03-04 15:13:18</cachedUntil>\r\n</eveapi>"
+    http_version: '1.1'
+  recorded_at: Mon, 04 Mar 2013 14:39:02 GMT
+recorded_with: VCR 2.4.0

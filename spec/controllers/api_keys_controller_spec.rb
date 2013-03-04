@@ -113,7 +113,7 @@ describe ApiKeysController do
       it "assigns the api_key as @api_key" do
         api_key = FactoryGirl.create(:api_key)
         ApiKey.any_instance.stub(:save).and_return(false)
-        put :update, {:id => api_key.to_param, :api_key => { "verification_code" => "YourString", "user_id" => "1"}}
+        put :update, {:id => api_key.to_param, :api_key => { "verification_code" => "YourString"}}
         assigns(:api_key).should eq(api_key)
       end
 
