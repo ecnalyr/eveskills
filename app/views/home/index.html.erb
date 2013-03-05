@@ -1,8 +1,2 @@
 <h3>Home</h3>
-<% @users.each do |user| %>
-  <p>User: <%=link_to user.name, user %></p>
-<% end %>
-
-<h4>Api results:</h4>
-
-<%= @api_results %>
+<%= link_to "api_keys", api_keys_path %>
