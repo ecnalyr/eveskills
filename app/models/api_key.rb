@@ -87,14 +87,8 @@ class ApiKey < ActiveRecord::Base
       end
 
       def get_training_queue(api)
-        queue = []
-        api.xpath("//row").each do |skill_in_queue|
-          skill = {}
-          skill_in_queue.attributes.each do |details|
-            skill[details[0].to_s.to_sym] = details[1].to_s
-          end
-          queue << skill
+        api.xpath("//row").map do |row|
+          Hash[ row.attributes.to_a.map { |k, v| [k.to_sym, v.to_s] } ]
         end
-        queue
       end
 end
