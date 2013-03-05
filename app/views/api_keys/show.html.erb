@@ -45,5 +45,12 @@
     <%= @api_key.current_skill_training_end_time %>
 </p>
 
+<p>
+    <b>Skill training queue:<b>
+      <% @api_key.training_queue.each do |queued| %>
+          <%= queued %>
+      <% end %>
+</p>
+
 <%= link_to 'Edit', edit_api_key_path(@api_key) %> |
 <%= link_to 'Back', api_keys_path %>

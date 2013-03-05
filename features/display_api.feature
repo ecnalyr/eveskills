@@ -11,6 +11,9 @@ Background:
 
 Scenario: User submits a new eve character skill api key with a skill in training
     When user visits their api_key show page
-    Then user should be presented with "1867200" as their "Eve api identifier"
+    Then the user should see "Eve Api Id: 1867200"
     Then the user should see "Skill in training?: true"
     Then the user should see "UTC"
+    Then the user should see ":queuePosition=>"0""
+
+    

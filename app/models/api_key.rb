@@ -52,6 +52,8 @@ class ApiKey < ActiveRecord::Base
     api = get_api_results_for("SkillQueue")
     if skill_in_training?
       get_training_queue(api)
+    else
+      []
     end
   end
 

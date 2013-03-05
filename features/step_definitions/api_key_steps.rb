@@ -18,6 +18,10 @@ Given /^an api_key with a skill in training$/ do
   @api = FactoryGirl.create(:api_key, :skill_is_training)
 end
 
+Given /^an api_key with a skill not training$/ do
+  @api = FactoryGirl.create(:api_key, :skill_not_training)
+end
+
 When /^user visits the add new character page$/ do
   visit(new_api_key_path)
 end
@@ -34,11 +38,10 @@ When /^user clicks "(.*?)"$/ do |button|
   click_button(button)
 end
 
-Then /^user should be presented with "(.*?)" as their "(.*?)"$/ do |value, field|
-  page.has_field?(field, :with => value)
-end
-
 Then /^the user should see "(.*?)"$/ do |text|
   page.should have_text(text)
 end
 
+Then /^the user should not see "(.*?)"$/ do |text|
+  page.should_not have_text(text)
+end
