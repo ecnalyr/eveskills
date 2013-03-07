@@ -70,4 +70,14 @@ class ApiKeysController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def pull_data
+    pp params[:id]
+    @api_key = ApiKey.find(params[:id])
+    @api_key.populate_char_sheet
+
+    respond_to do |format|
+      format.html { redirect_to @api_key }
+    end
+  end
 end

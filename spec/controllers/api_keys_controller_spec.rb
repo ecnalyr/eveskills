@@ -141,4 +141,14 @@ describe ApiKeysController do
     end
   end
 
+  describe "pull_data" do
+    it "udpates api_key.char_data with data from Eve online", :vcr, record: :all do
+      api = FactoryGirl.create(:api_key, :skill_is_training)
+      ApiKey.any_instance.should_receive(:populate_char_sheet)
+      put :pull_data, {:id => api.to_param}
+      
+      response.should redirect_to(api)
+    end
+  end
+
 end

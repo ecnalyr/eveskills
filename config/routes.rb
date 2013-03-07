@@ -1,5 +1,6 @@
 Eveskills::Application.routes.draw do
   resources :api_keys
+  match 'api_keys/pull_data/:id' => 'api_keys#pull_data', :via => :put
 
 
   authenticated :user do

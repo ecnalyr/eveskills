@@ -8,6 +8,7 @@
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
 #  eve_api_identifier :string(255)
+#  char_sheet         :string(255)
 #
 
 require 'spec_helper'
@@ -79,4 +80,13 @@ describe "Api_key", :vcr do
       [{:queuePosition=>"0", :typeID=>"20495", :level=>"3", :startSP=>"2829", :endSP=>"16000", :startTime=>"2013-03-04 16:25:50", :endTime=>"2013-03-05 01:02:20"}, {:queuePosition=>"1", :typeID=>"19767", :level=>"4", :startSP=>"40000", :endSP=>"226275", :startTime=>"2013-03-05 01:02:20", :endTime=>"2013-03-07 06:40:31"}]
     end
   end
+
+  context "#populate_char_sheet" do
+    it "should populate char_sheet with xml data from an Eve api" do
+      api_key = FactoryGirl.create(:api_key, :skill_is_training)
+      api_key.populate_char_sheet
+      api_key.char_sheet.should_not be_nil
+    end
+  end
+
 end

@@ -8,6 +8,19 @@
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
 #  eve_api_identifier :string(255)
+#  char_sheet         :string(255)
+#
+
+# == Schema Information
+#
+# Table name: api_keys
+#
+#  id                 :integer          not null, primary key
+#  verification_code  :string(255)
+#  user_id            :integer
+#  created_at         :datetime         not null
+#  updated_at         :datetime         not null
+#  eve_api_identifier :string(255)
 #
 require 'Nokogiri'
 
@@ -16,8 +29,12 @@ class ApiKey < ActiveRecord::Base
 
   belongs_to :user
   
-  attr_accessible :id, :verification_code, :eve_api_identifier
+  attr_accessible :id, :verification_code, :eve_api_identifier, :char_sheet
   attr_accessible :user_id
+
+  def populate_char_sheet
+    self.char_sheet = get_api_results_for("CharacterSheet")
+  end
 
   def character_name
     api = get_api_results_for("CharacterSheet")

@@ -31,5 +31,9 @@ describe ApiKeysController do
       delete("/api_keys/1").should route_to("api_keys#destroy", :id => "1")
     end
 
+    it "routes to #pull_data" do
+      put("/api_keys/pull_data/1").should route_to("api_keys#pull_data", :id => "1")
+    end
+
   end
 end
