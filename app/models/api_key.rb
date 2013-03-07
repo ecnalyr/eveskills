@@ -34,6 +34,7 @@ class ApiKey < ActiveRecord::Base
 
   def populate_char_sheet
     self.char_sheet = get_api_results_for("CharacterSheet")
+    save
   end
 
   def character_name

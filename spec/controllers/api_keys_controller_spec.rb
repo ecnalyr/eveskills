@@ -143,11 +143,17 @@ describe ApiKeysController do
 
   describe "pull_data" do
     it "udpates api_key.char_data with data from Eve online", :vcr, record: :all do
-      api = FactoryGirl.create(:api_key, :skill_is_training)
+      api_key = FactoryGirl.create(:api_key, :skill_is_training)
+      # Assuming there are no other api_keys in the database. . .
       ApiKey.any_instance.should_receive(:populate_char_sheet)
-      put :pull_data, {:id => api.to_param}
-      
-      response.should redirect_to(api)
+      put :pull_data, {:id => api_key.to_param}
+      ApiKey.any_instance.should_not be_nil 
+    end
+
+    it "should redirect to the api_key after a successful pull of api data", :vcr, record: :all do
+      api_key = FactoryGirl.create(:api_key, :skill_is_training)
+      put :pull_data, {:id => api_key.to_param}
+      response.should redirect_to(api_key)
     end
   end
 
