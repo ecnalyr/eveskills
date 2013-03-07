@@ -104,7 +104,7 @@ class ApiKey < ActiveRecord::Base
 
       def get_training_queue(api)
         api.xpath("//row").map do |row|
-          Hash[ row.attributes.to_a.map { |k, v| [k.to_sym, v.to_s] } ]
+          Hash[ row.attributes.map { |k, v| [k.to_sym, v.to_s] } ]
         end
       end
 end

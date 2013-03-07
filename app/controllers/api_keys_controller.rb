@@ -72,7 +72,6 @@ class ApiKeysController < ApplicationController
   end
 
   def pull_data
-    pp params[:id]
     @api_key = ApiKey.find(params[:id])
     @api_key.populate_char_sheet
 
