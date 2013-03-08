@@ -26,7 +26,7 @@ require 'Nokogiri'
 
 class ApiKey < ActiveRecord::Base
   validates_presence_of :user_id, :verification_code, :eve_api_identifier
-#we need to validate that the key's have no spaces
+  #we need to validate that the key's have no spaces
 
 
   belongs_to :user
@@ -38,9 +38,6 @@ class ApiKey < ActiveRecord::Base
 
   def populate_char_sheet
     self.char_sheet = get_api_results_for("CharacterSheet")
-    # save
-    # TODO: This used to save, now it doesn't - does this change the associated
-    # api_key controller method "pull_data's" role?
   end
 
   def character_name
