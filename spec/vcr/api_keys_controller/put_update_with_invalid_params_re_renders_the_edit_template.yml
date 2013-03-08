@@ -1,0 +1,33 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.eveonline.com/char/CharacterSheet.xml.aspx?keyID=MyString&vCode=MyString
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type:
+      - application/xml; charset=utf-8
+      date:
+      - Fri, 08 Mar 2013 13:26:44 GMT
+      content-length:
+      - '259'
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version='1.0' encoding='UTF-8'?>\r\n<eveapi version=\"2\">\r\n
+        \ <currentTime>2013-03-08 13:26:45</currentTime>\r\n  <error code=\"106\">Must
+        provide userID or keyID parameter for authentication.</error>\r\n  <cachedUntil>2013-03-09
+        01:26:45</cachedUntil>\r\n</eveapi>"
+    http_version: '1.1'
+  recorded_at: Fri, 08 Mar 2013 13:26:49 GMT
+recorded_with: VCR 2.4.0

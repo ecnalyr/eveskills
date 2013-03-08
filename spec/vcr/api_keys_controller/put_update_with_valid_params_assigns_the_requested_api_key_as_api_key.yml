@@ -2,36 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.eveonline.com/char/CharacterSheet.xml.aspx?keyID=MyString&vCode=MyString
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      accept:
-      - ! '*/*'
-      user-agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      content-type:
-      - application/xml; charset=utf-8
-      date:
-      - Fri, 01 Mar 2013 13:34:07 GMT
-      content-length:
-      - '259'
-    body:
-      encoding: US-ASCII
-      string: ! "<?xml version='1.0' encoding='UTF-8'?>\r\n<eveapi version=\"2\">\r\n
-        \ <currentTime>2013-03-01 13:34:07</currentTime>\r\n  <error code=\"106\">Must
-        provide userID or keyID parameter for authentication.</error>\r\n  <cachedUntil>2013-03-02
-        01:34:07</cachedUntil>\r\n</eveapi>"
-    http_version: '1.1'
-  recorded_at: Fri, 01 Mar 2013 13:34:07 GMT
-- request:
-    method: get
     uri: https://api.eveonline.com/char/CharacterSheet.xml.aspx?keyID=MyString&vCode=YourString
     body:
       encoding: US-ASCII
@@ -92,6 +62,36 @@ http_interactions:
   recorded_at: Sun, 03 Mar 2013 18:16:03 GMT
 - request:
     method: get
+    uri: https://api.eveonline.com/char/CharacterSheet.xml.aspx?keyID=MyString&vCode=MyString
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type:
+      - application/xml; charset=utf-8
+      date:
+      - Fri, 08 Mar 2013 13:26:41 GMT
+      content-length:
+      - '259'
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version='1.0' encoding='UTF-8'?>\r\n<eveapi version=\"2\">\r\n
+        \ <currentTime>2013-03-08 13:26:42</currentTime>\r\n  <error code=\"106\">Must
+        provide userID or keyID parameter for authentication.</error>\r\n  <cachedUntil>2013-03-09
+        01:26:42</cachedUntil>\r\n</eveapi>"
+    http_version: '1.1'
+  recorded_at: Fri, 08 Mar 2013 13:26:46 GMT
+- request:
+    method: get
     uri: https://api.eveonline.com/char/CharacterSheet.xml.aspx?keyID=1867200&vCode=oReWk9nG5QutSKn03RINpBXajnDtU2egla3uTr4dLQDV4kVTeQodWgy1He7ECeU4
     body:
       encoding: US-ASCII
@@ -111,17 +111,17 @@ http_interactions:
       content-type:
       - application/xml; charset=utf-8
       date:
-      - Sun, 03 Mar 2013 19:11:02 GMT
+      - Fri, 08 Mar 2013 13:26:42 GMT
     body:
       encoding: US-ASCII
       string: ! "<?xml version='1.0' encoding='UTF-8'?>\r\n<eveapi version=\"2\">\r\n
-        \ <currentTime>2013-03-03 19:11:03</currentTime>\r\n  <result>\r\n    <characterID>1725191100</characterID>\r\n
+        \ <currentTime>2013-03-08 13:26:42</currentTime>\r\n  <result>\r\n    <characterID>1725191100</characterID>\r\n
         \   <name>Alba Tross</name>\r\n    <DoB>2008-03-04 13:54:00</DoB>\r\n    <race>Gallente</race>\r\n
         \   <bloodLine>Intaki</bloodLine>\r\n    <ancestry>Reborn</ancestry>\r\n    <gender>Female</gender>\r\n
         \   <corporationName>Dreddit</corporationName>\r\n    <corporationID>1018389948</corporationID>\r\n
         \   <allianceName>Test Alliance Please Ignore</allianceName>\r\n    <allianceID>498125261</allianceID>\r\n
         \   <cloneName>Clone Grade Sigma</cloneName>\r\n    <cloneSkillPoints>92500000</cloneSkillPoints>\r\n
-        \   <balance>67873510.57</balance>\r\n    <attributeEnhancers />\r\n    <attributes>\r\n
+        \   <balance>102102260.56</balance>\r\n    <attributeEnhancers />\r\n    <attributes>\r\n
         \     <intelligence>27</intelligence>\r\n      <memory>21</memory>\r\n      <charisma>17</charisma>\r\n
         \     <perception>17</perception>\r\n      <willpower>17</willpower>\r\n    </attributes>\r\n
         \   <rowset name=\"skills\" key=\"typeID\" columns=\"typeID,skillpoints,level,published\">\r\n
@@ -132,7 +132,7 @@ http_interactions:
         />\r\n      <row typeID=\"28656\" skillpoints=\"2560000\" level=\"5\" published=\"1\"
         />\r\n      <row typeID=\"3427\" skillpoints=\"512000\" level=\"5\" published=\"1\"
         />\r\n      <row typeID=\"3350\" skillpoints=\"2829\" level=\"2\" published=\"1\"
-        />\r\n      <row typeID=\"20495\" skillpoints=\"2829\" level=\"2\" published=\"1\"
+        />\r\n      <row typeID=\"20495\" skillpoints=\"6045\" level=\"2\" published=\"1\"
         />\r\n      <row typeID=\"3349\" skillpoints=\"2829\" level=\"2\" published=\"1\"
         />\r\n      <row typeID=\"3320\" skillpoints=\"45255\" level=\"4\" published=\"1\"
         />\r\n      <row typeID=\"25235\" skillpoints=\"8000\" level=\"3\" published=\"1\"
@@ -289,7 +289,7 @@ http_interactions:
         />\r\n      <row typeID=\"24270\" skillpoints=\"4243\" level=\"2\" published=\"1\"
         />\r\n      <row typeID=\"3394\" skillpoints=\"512000\" level=\"5\" published=\"1\"
         />\r\n      <row typeID=\"26254\" skillpoints=\"24000\" level=\"3\" published=\"1\"
-        />\r\n      <row typeID=\"19767\" skillpoints=\"40000\" level=\"3\" published=\"1\"
+        />\r\n      <row typeID=\"19767\" skillpoints=\"226275\" level=\"4\" published=\"1\"
         />\r\n    </rowset>\r\n    <rowset name=\"certificates\" key=\"certificateID\"
         columns=\"certificateID\">\r\n      <row certificateID=\"1\" />\r\n      <row
         certificateID=\"258\" />\r\n      <row certificateID=\"5\" />\r\n      <row
@@ -347,8 +347,8 @@ http_interactions:
         key=\"roleID\" columns=\"roleID,roleName\" />\r\n    <rowset name=\"corporationRolesAtBase\"
         key=\"roleID\" columns=\"roleID,roleName\" />\r\n    <rowset name=\"corporationRolesAtOther\"
         key=\"roleID\" columns=\"roleID,roleName\" />\r\n    <rowset name=\"corporationTitles\"
-        key=\"titleID\" columns=\"titleID,titleName\" />\r\n  </result>\r\n  <cachedUntil>2013-03-03
-        19:12:00</cachedUntil>\r\n</eveapi>"
+        key=\"titleID\" columns=\"titleID,titleName\" />\r\n  </result>\r\n  <cachedUntil>2013-03-08
+        13:36:39</cachedUntil>\r\n</eveapi>"
     http_version: '1.1'
-  recorded_at: Sun, 03 Mar 2013 19:11:03 GMT
+  recorded_at: Fri, 08 Mar 2013 13:26:46 GMT
 recorded_with: VCR 2.4.0

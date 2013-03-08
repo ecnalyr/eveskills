@@ -157,17 +157,17 @@ http_interactions:
       content-type:
       - application/xml; charset=utf-8
       date:
-      - Thu, 28 Feb 2013 16:41:35 GMT
+      - Fri, 08 Mar 2013 13:27:25 GMT
     body:
       encoding: US-ASCII
       string: ! "<?xml version='1.0' encoding='UTF-8'?>\r\n<eveapi version=\"2\">\r\n
-        \ <currentTime>2013-02-28 16:41:35</currentTime>\r\n  <result>\r\n    <characterID>1725191100</characterID>\r\n
+        \ <currentTime>2013-03-08 13:27:25</currentTime>\r\n  <result>\r\n    <characterID>1725191100</characterID>\r\n
         \   <name>Alba Tross</name>\r\n    <DoB>2008-03-04 13:54:00</DoB>\r\n    <race>Gallente</race>\r\n
         \   <bloodLine>Intaki</bloodLine>\r\n    <ancestry>Reborn</ancestry>\r\n    <gender>Female</gender>\r\n
         \   <corporationName>Dreddit</corporationName>\r\n    <corporationID>1018389948</corporationID>\r\n
         \   <allianceName>Test Alliance Please Ignore</allianceName>\r\n    <allianceID>498125261</allianceID>\r\n
         \   <cloneName>Clone Grade Sigma</cloneName>\r\n    <cloneSkillPoints>92500000</cloneSkillPoints>\r\n
-        \   <balance>69226285.08</balance>\r\n    <attributeEnhancers />\r\n    <attributes>\r\n
+        \   <balance>102102260.56</balance>\r\n    <attributeEnhancers />\r\n    <attributes>\r\n
         \     <intelligence>27</intelligence>\r\n      <memory>21</memory>\r\n      <charisma>17</charisma>\r\n
         \     <perception>17</perception>\r\n      <willpower>17</willpower>\r\n    </attributes>\r\n
         \   <rowset name=\"skills\" key=\"typeID\" columns=\"typeID,skillpoints,level,published\">\r\n
@@ -178,9 +178,9 @@ http_interactions:
         />\r\n      <row typeID=\"28656\" skillpoints=\"2560000\" level=\"5\" published=\"1\"
         />\r\n      <row typeID=\"3427\" skillpoints=\"512000\" level=\"5\" published=\"1\"
         />\r\n      <row typeID=\"3350\" skillpoints=\"2829\" level=\"2\" published=\"1\"
-        />\r\n      <row typeID=\"20495\" skillpoints=\"2829\" level=\"2\" published=\"1\"
+        />\r\n      <row typeID=\"20495\" skillpoints=\"6045\" level=\"2\" published=\"1\"
         />\r\n      <row typeID=\"3349\" skillpoints=\"2829\" level=\"2\" published=\"1\"
-        />\r\n      <row typeID=\"3320\" skillpoints=\"8000\" level=\"3\" published=\"1\"
+        />\r\n      <row typeID=\"3320\" skillpoints=\"45255\" level=\"4\" published=\"1\"
         />\r\n      <row typeID=\"25235\" skillpoints=\"8000\" level=\"3\" published=\"1\"
         />\r\n      <row typeID=\"28164\" skillpoints=\"768000\" level=\"5\" published=\"1\"
         />\r\n      <row typeID=\"26252\" skillpoints=\"90510\" level=\"4\" published=\"1\"
@@ -335,6 +335,7 @@ http_interactions:
         />\r\n      <row typeID=\"24270\" skillpoints=\"4243\" level=\"2\" published=\"1\"
         />\r\n      <row typeID=\"3394\" skillpoints=\"512000\" level=\"5\" published=\"1\"
         />\r\n      <row typeID=\"26254\" skillpoints=\"24000\" level=\"3\" published=\"1\"
+        />\r\n      <row typeID=\"19767\" skillpoints=\"226275\" level=\"4\" published=\"1\"
         />\r\n    </rowset>\r\n    <rowset name=\"certificates\" key=\"certificateID\"
         columns=\"certificateID\">\r\n      <row certificateID=\"1\" />\r\n      <row
         certificateID=\"258\" />\r\n      <row certificateID=\"5\" />\r\n      <row
@@ -392,10 +393,10 @@ http_interactions:
         key=\"roleID\" columns=\"roleID,roleName\" />\r\n    <rowset name=\"corporationRolesAtBase\"
         key=\"roleID\" columns=\"roleID,roleName\" />\r\n    <rowset name=\"corporationRolesAtOther\"
         key=\"roleID\" columns=\"roleID,roleName\" />\r\n    <rowset name=\"corporationTitles\"
-        key=\"titleID\" columns=\"titleID,titleName\" />\r\n  </result>\r\n  <cachedUntil>2013-02-28
-        16:55:59</cachedUntil>\r\n</eveapi>"
+        key=\"titleID\" columns=\"titleID,titleName\" />\r\n  </result>\r\n  <cachedUntil>2013-03-08
+        13:36:39</cachedUntil>\r\n</eveapi>"
     http_version: '1.1'
-  recorded_at: Thu, 28 Feb 2013 16:41:35 GMT
+  recorded_at: Fri, 08 Mar 2013 13:27:30 GMT
 - request:
     method: get
     uri: https://api.eveonline.com/char/CharacterSheet.xml.aspx?keyID=1867200&vCode=oReWk9nG5QutSKn03RINpBXajnDtU2egla3uTr4dLQDV4kVTeQodWgy1He7ECeU4
@@ -417,17 +418,17 @@ http_interactions:
       content-type:
       - application/xml; charset=utf-8
       date:
-      - Thu, 28 Feb 2013 16:41:36 GMT
+      - Fri, 08 Mar 2013 13:37:31 GMT
     body:
       encoding: US-ASCII
       string: ! "<?xml version='1.0' encoding='UTF-8'?>\r\n<eveapi version=\"2\">\r\n
-        \ <currentTime>2013-02-28 16:41:36</currentTime>\r\n  <result>\r\n    <characterID>1725191100</characterID>\r\n
+        \ <currentTime>2013-03-08 13:37:31</currentTime>\r\n  <result>\r\n    <characterID>1725191100</characterID>\r\n
         \   <name>Alba Tross</name>\r\n    <DoB>2008-03-04 13:54:00</DoB>\r\n    <race>Gallente</race>\r\n
         \   <bloodLine>Intaki</bloodLine>\r\n    <ancestry>Reborn</ancestry>\r\n    <gender>Female</gender>\r\n
         \   <corporationName>Dreddit</corporationName>\r\n    <corporationID>1018389948</corporationID>\r\n
         \   <allianceName>Test Alliance Please Ignore</allianceName>\r\n    <allianceID>498125261</allianceID>\r\n
         \   <cloneName>Clone Grade Sigma</cloneName>\r\n    <cloneSkillPoints>92500000</cloneSkillPoints>\r\n
-        \   <balance>69226285.08</balance>\r\n    <attributeEnhancers />\r\n    <attributes>\r\n
+        \   <balance>102102260.56</balance>\r\n    <attributeEnhancers />\r\n    <attributes>\r\n
         \     <intelligence>27</intelligence>\r\n      <memory>21</memory>\r\n      <charisma>17</charisma>\r\n
         \     <perception>17</perception>\r\n      <willpower>17</willpower>\r\n    </attributes>\r\n
         \   <rowset name=\"skills\" key=\"typeID\" columns=\"typeID,skillpoints,level,published\">\r\n
@@ -438,9 +439,9 @@ http_interactions:
         />\r\n      <row typeID=\"28656\" skillpoints=\"2560000\" level=\"5\" published=\"1\"
         />\r\n      <row typeID=\"3427\" skillpoints=\"512000\" level=\"5\" published=\"1\"
         />\r\n      <row typeID=\"3350\" skillpoints=\"2829\" level=\"2\" published=\"1\"
-        />\r\n      <row typeID=\"20495\" skillpoints=\"2829\" level=\"2\" published=\"1\"
+        />\r\n      <row typeID=\"20495\" skillpoints=\"6045\" level=\"2\" published=\"1\"
         />\r\n      <row typeID=\"3349\" skillpoints=\"2829\" level=\"2\" published=\"1\"
-        />\r\n      <row typeID=\"3320\" skillpoints=\"8000\" level=\"3\" published=\"1\"
+        />\r\n      <row typeID=\"3320\" skillpoints=\"45255\" level=\"4\" published=\"1\"
         />\r\n      <row typeID=\"25235\" skillpoints=\"8000\" level=\"3\" published=\"1\"
         />\r\n      <row typeID=\"28164\" skillpoints=\"768000\" level=\"5\" published=\"1\"
         />\r\n      <row typeID=\"26252\" skillpoints=\"90510\" level=\"4\" published=\"1\"
@@ -595,6 +596,7 @@ http_interactions:
         />\r\n      <row typeID=\"24270\" skillpoints=\"4243\" level=\"2\" published=\"1\"
         />\r\n      <row typeID=\"3394\" skillpoints=\"512000\" level=\"5\" published=\"1\"
         />\r\n      <row typeID=\"26254\" skillpoints=\"24000\" level=\"3\" published=\"1\"
+        />\r\n      <row typeID=\"19767\" skillpoints=\"226275\" level=\"4\" published=\"1\"
         />\r\n    </rowset>\r\n    <rowset name=\"certificates\" key=\"certificateID\"
         columns=\"certificateID\">\r\n      <row certificateID=\"1\" />\r\n      <row
         certificateID=\"258\" />\r\n      <row certificateID=\"5\" />\r\n      <row
@@ -652,8 +654,269 @@ http_interactions:
         key=\"roleID\" columns=\"roleID,roleName\" />\r\n    <rowset name=\"corporationRolesAtBase\"
         key=\"roleID\" columns=\"roleID,roleName\" />\r\n    <rowset name=\"corporationRolesAtOther\"
         key=\"roleID\" columns=\"roleID,roleName\" />\r\n    <rowset name=\"corporationTitles\"
-        key=\"titleID\" columns=\"titleID,titleName\" />\r\n  </result>\r\n  <cachedUntil>2013-02-28
-        16:55:59</cachedUntil>\r\n</eveapi>"
+        key=\"titleID\" columns=\"titleID,titleName\" />\r\n  </result>\r\n  <cachedUntil>2013-03-08
+        13:52:15</cachedUntil>\r\n</eveapi>"
     http_version: '1.1'
-  recorded_at: Thu, 28 Feb 2013 16:41:36 GMT
+  recorded_at: Fri, 08 Mar 2013 13:37:35 GMT
+- request:
+    method: get
+    uri: https://api.eveonline.com/char/CharacterSheet.xml.aspx?keyID=1867200&vCode=oReWk9nG5QutSKn03RINpBXajnDtU2egla3uTr4dLQDV4kVTeQodWgy1He7ECeU4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      transfer-encoding:
+      - chunked
+      content-type:
+      - application/xml; charset=utf-8
+      date:
+      - Fri, 08 Mar 2013 13:44:11 GMT
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version='1.0' encoding='UTF-8'?>\r\n<eveapi version=\"2\">\r\n
+        \ <currentTime>2013-03-08 13:44:11</currentTime>\r\n  <result>\r\n    <characterID>1725191100</characterID>\r\n
+        \   <name>Alba Tross</name>\r\n    <DoB>2008-03-04 13:54:00</DoB>\r\n    <race>Gallente</race>\r\n
+        \   <bloodLine>Intaki</bloodLine>\r\n    <ancestry>Reborn</ancestry>\r\n    <gender>Female</gender>\r\n
+        \   <corporationName>Dreddit</corporationName>\r\n    <corporationID>1018389948</corporationID>\r\n
+        \   <allianceName>Test Alliance Please Ignore</allianceName>\r\n    <allianceID>498125261</allianceID>\r\n
+        \   <cloneName>Clone Grade Sigma</cloneName>\r\n    <cloneSkillPoints>92500000</cloneSkillPoints>\r\n
+        \   <balance>102102260.56</balance>\r\n    <attributeEnhancers />\r\n    <attributes>\r\n
+        \     <intelligence>27</intelligence>\r\n      <memory>21</memory>\r\n      <charisma>17</charisma>\r\n
+        \     <perception>17</perception>\r\n      <willpower>17</willpower>\r\n    </attributes>\r\n
+        \   <rowset name=\"skills\" key=\"typeID\" columns=\"typeID,skillpoints,level,published\">\r\n
+        \     <row typeID=\"26256\" skillpoints=\"135765\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"11082\" skillpoints=\"135765\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"3416\" skillpoints=\"45255\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"16069\" skillpoints=\"512000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"28656\" skillpoints=\"2560000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"3427\" skillpoints=\"512000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"3350\" skillpoints=\"2829\" level=\"2\" published=\"1\"
+        />\r\n      <row typeID=\"20495\" skillpoints=\"6045\" level=\"2\" published=\"1\"
+        />\r\n      <row typeID=\"3349\" skillpoints=\"2829\" level=\"2\" published=\"1\"
+        />\r\n      <row typeID=\"3320\" skillpoints=\"45255\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"25235\" skillpoints=\"8000\" level=\"3\" published=\"1\"
+        />\r\n      <row typeID=\"28164\" skillpoints=\"768000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"26252\" skillpoints=\"90510\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"3356\" skillpoints=\"16000\" level=\"3\" published=\"1\"
+        />\r\n      <row typeID=\"12210\" skillpoints=\"135765\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"3425\" skillpoints=\"90510\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"3359\" skillpoints=\"24000\" level=\"3\" published=\"1\"
+        />\r\n      <row typeID=\"3410\" skillpoints=\"135765\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"12487\" skillpoints=\"1280000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"17940\" skillpoints=\"181020\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"22761\" skillpoints=\"271530\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"25739\" skillpoints=\"362039\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"3455\" skillpoints=\"256000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"3418\" skillpoints=\"768000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"3417\" skillpoints=\"256000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"3429\" skillpoints=\"256000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"3432\" skillpoints=\"512000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"3426\" skillpoints=\"256000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"11452\" skillpoints=\"7072\" level=\"2\" published=\"1\"
+        />\r\n      <row typeID=\"11453\" skillpoints=\"7072\" level=\"2\" published=\"1\"
+        />\r\n      <row typeID=\"23121\" skillpoints=\"7072\" level=\"2\" published=\"1\"
+        />\r\n      <row typeID=\"20533\" skillpoints=\"633568\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"3456\" skillpoints=\"1280000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"21803\" skillpoints=\"362039\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"27906\" skillpoints=\"362039\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"23069\" skillpoints=\"3072000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"24568\" skillpoints=\"2560000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"3423\" skillpoints=\"512000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"21610\" skillpoints=\"2048000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"24313\" skillpoints=\"3584000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"25863\" skillpoints=\"135765\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"3551\" skillpoints=\"45255\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"21603\" skillpoints=\"1280000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"12211\" skillpoints=\"226275\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"3442\" skillpoints=\"1280000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"3441\" skillpoints=\"1280000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"23606\" skillpoints=\"256000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"12305\" skillpoints=\"256000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"23618\" skillpoints=\"1280000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"24613\" skillpoints=\"2048000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"12095\" skillpoints=\"1024000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"25811\" skillpoints=\"226275\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"3439\" skillpoints=\"768000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"12484\" skillpoints=\"1280000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"12485\" skillpoints=\"1280000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"23566\" skillpoints=\"1280000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"25810\" skillpoints=\"226275\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"19766\" skillpoints=\"226275\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"19760\" skillpoints=\"768000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"19759\" skillpoints=\"181020\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"12206\" skillpoints=\"226275\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"11207\" skillpoints=\"1536000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"12190\" skillpoints=\"16000\" level=\"3\" published=\"1\"
+        />\r\n      <row typeID=\"12191\" skillpoints=\"8000\" level=\"3\" published=\"1\"
+        />\r\n      <row typeID=\"12193\" skillpoints=\"8000\" level=\"3\" published=\"1\"
+        />\r\n      <row typeID=\"12195\" skillpoints=\"45255\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"22536\" skillpoints=\"90510\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"3307\" skillpoints=\"1280000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"3411\" skillpoints=\"135765\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"12099\" skillpoints=\"271530\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"3318\" skillpoints=\"512000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"3422\" skillpoints=\"512000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"3420\" skillpoints=\"181020\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"3419\" skillpoints=\"135765\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"16591\" skillpoints=\"271530\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"12096\" skillpoints=\"1536000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"3424\" skillpoints=\"90510\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"3340\" skillpoints=\"181020\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"3450\" skillpoints=\"256000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"3449\" skillpoints=\"256000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"3368\" skillpoints=\"16000\" level=\"3\" published=\"1\"
+        />\r\n      <row typeID=\"3363\" skillpoints=\"8000\" level=\"3\" published=\"1\"
+        />\r\n      <row typeID=\"3355\" skillpoints=\"8000\" level=\"3\" published=\"1\"
+        />\r\n      <row typeID=\"20342\" skillpoints=\"1280000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"3315\" skillpoints=\"1024000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"3304\" skillpoints=\"768000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"3454\" skillpoints=\"1280000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"22809\" skillpoints=\"512000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"22808\" skillpoints=\"90510\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"22807\" skillpoints=\"90510\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"22806\" skillpoints=\"90510\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"3421\" skillpoints=\"90510\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"3433\" skillpoints=\"135765\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"28615\" skillpoints=\"181020\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"12093\" skillpoints=\"181020\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"23594\" skillpoints=\"1280000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"21718\" skillpoints=\"768000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"24571\" skillpoints=\"452549\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"11579\" skillpoints=\"271530\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"32339\" skillpoints=\"3072000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"26255\" skillpoints=\"135765\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"3330\" skillpoints=\"90510\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"3331\" skillpoints=\"90510\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"3329\" skillpoints=\"90510\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"3405\" skillpoints=\"45255\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"24572\" skillpoints=\"452549\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"13278\" skillpoints=\"24000\" level=\"3\" published=\"1\"
+        />\r\n      <row typeID=\"3440\" skillpoints=\"1024000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"3335\" skillpoints=\"40000\" level=\"3\" published=\"1\"
+        />\r\n      <row typeID=\"3334\" skillpoints=\"40000\" level=\"3\" published=\"1\"
+        />\r\n      <row typeID=\"33000\" skillpoints=\"90510\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"3443\" skillpoints=\"8000\" level=\"3\" published=\"1\"
+        />\r\n      <row typeID=\"3438\" skillpoints=\"512000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"3436\" skillpoints=\"256000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"3413\" skillpoints=\"256000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"3406\" skillpoints=\"45255\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"3402\" skillpoints=\"256000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"3393\" skillpoints=\"256000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"3392\" skillpoints=\"256000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"3386\" skillpoints=\"256000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"3385\" skillpoints=\"256000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"3380\" skillpoints=\"256000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"3348\" skillpoints=\"256000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"3328\" skillpoints=\"512000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"3327\" skillpoints=\"256000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"3301\" skillpoints=\"256000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"3300\" skillpoints=\"256000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"19761\" skillpoints=\"226275\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"19921\" skillpoints=\"768000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"3319\" skillpoints=\"45255\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"3434\" skillpoints=\"135765\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"3336\" skillpoints=\"2048000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"3389\" skillpoints=\"24000\" level=\"3\" published=\"1\"
+        />\r\n      <row typeID=\"3302\" skillpoints=\"45255\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"3412\" skillpoints=\"768000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"26253\" skillpoints=\"135765\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"11450\" skillpoints=\"7072\" level=\"2\" published=\"1\"
+        />\r\n      <row typeID=\"24242\" skillpoints=\"8000\" level=\"3\" published=\"1\"
+        />\r\n      <row typeID=\"22578\" skillpoints=\"5657\" level=\"2\" published=\"1\"
+        />\r\n      <row typeID=\"11584\" skillpoints=\"135765\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"3437\" skillpoints=\"256000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"20494\" skillpoints=\"2829\" level=\"2\" published=\"1\"
+        />\r\n      <row typeID=\"24562\" skillpoints=\"3584000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"3332\" skillpoints=\"1280000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"3333\" skillpoints=\"40000\" level=\"3\" published=\"1\"
+        />\r\n      <row typeID=\"28879\" skillpoints=\"16000\" level=\"3\" published=\"1\"
+        />\r\n      <row typeID=\"3453\" skillpoints=\"512000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"3452\" skillpoints=\"1024000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"3451\" skillpoints=\"512000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"3428\" skillpoints=\"512000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"3431\" skillpoints=\"256000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"3435\" skillpoints=\"135765\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"3312\" skillpoints=\"512000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"3316\" skillpoints=\"512000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"3310\" skillpoints=\"512000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"3311\" skillpoints=\"512000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"21611\" skillpoints=\"2304000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"12097\" skillpoints=\"512000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"12486\" skillpoints=\"1280000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"24241\" skillpoints=\"512000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"3317\" skillpoints=\"226275\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"24270\" skillpoints=\"4243\" level=\"2\" published=\"1\"
+        />\r\n      <row typeID=\"3394\" skillpoints=\"512000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"26254\" skillpoints=\"24000\" level=\"3\" published=\"1\"
+        />\r\n      <row typeID=\"19767\" skillpoints=\"226275\" level=\"4\" published=\"1\"
+        />\r\n    </rowset>\r\n    <rowset name=\"certificates\" key=\"certificateID\"
+        columns=\"certificateID\">\r\n      <row certificateID=\"1\" />\r\n      <row
+        certificateID=\"258\" />\r\n      <row certificateID=\"5\" />\r\n      <row
+        certificateID=\"282\" />\r\n      <row certificateID=\"161\" />\r\n      <row
+        certificateID=\"165\" />\r\n      <row certificateID=\"38\" />\r\n      <row
+        certificateID=\"39\" />\r\n      <row certificateID=\"169\" />\r\n      <row
+        certificateID=\"46\" />\r\n      <row certificateID=\"47\" />\r\n      <row
+        certificateID=\"177\" />\r\n      <row certificateID=\"50\" />\r\n      <row
+        certificateID=\"51\" />\r\n      <row certificateID=\"180\" />\r\n      <row
+        certificateID=\"181\" />\r\n      <row certificateID=\"186\" />\r\n      <row
+        certificateID=\"189\" />\r\n      <row certificateID=\"190\" />\r\n      <row
+        certificateID=\"195\" />\r\n      <row certificateID=\"68\" />\r\n      <row
+        certificateID=\"204\" />\r\n      <row certificateID=\"93\" />\r\n      <row
+        certificateID=\"37\" />\r\n      <row certificateID=\"100\" />\r\n      <row
+        certificateID=\"239\" />\r\n      <row certificateID=\"332\" />\r\n      <row
+        certificateID=\"329\" />\r\n      <row certificateID=\"200\" />\r\n      <row
+        certificateID=\"12\" />\r\n      <row certificateID=\"69\" />\r\n      <row
+        certificateID=\"6\" />\r\n      <row certificateID=\"192\" />\r\n      <row
+        certificateID=\"170\" />\r\n      <row certificateID=\"107\" />\r\n      <row
+        certificateID=\"13\" />\r\n      <row certificateID=\"333\" />\r\n      <row
+        certificateID=\"65\" />\r\n      <row certificateID=\"183\" />\r\n      <row
+        certificateID=\"3\" />\r\n      <row certificateID=\"173\" />\r\n      <row
+        certificateID=\"101\" />\r\n      <row certificateID=\"103\" />\r\n      <row
+        certificateID=\"105\" />\r\n      <row certificateID=\"94\" />\r\n      <row
+        certificateID=\"96\" />\r\n      <row certificateID=\"98\" />\r\n      <row
+        certificateID=\"259\" />\r\n      <row certificateID=\"70\" />\r\n      <row
+        certificateID=\"162\" />\r\n      <row certificateID=\"166\" />\r\n      <row
+        certificateID=\"201\" />\r\n      <row certificateID=\"174\" />\r\n      <row
+        certificateID=\"171\" />\r\n      <row certificateID=\"196\" />\r\n      <row
+        certificateID=\"48\" />\r\n      <row certificateID=\"202\" />\r\n      <row
+        certificateID=\"212\" />\r\n      <row certificateID=\"36\" />\r\n      <row
+        certificateID=\"344\" />\r\n      <row certificateID=\"108\" />\r\n      <row
+        certificateID=\"114\" />\r\n      <row certificateID=\"115\" />\r\n      <row
+        certificateID=\"2\" />\r\n      <row certificateID=\"4\" />\r\n      <row
+        certificateID=\"66\" />\r\n      <row certificateID=\"67\" />\r\n      <row
+        certificateID=\"163\" />\r\n      <row certificateID=\"208\" />\r\n      <row
+        certificateID=\"19\" />\r\n      <row certificateID=\"164\" />\r\n      <row
+        certificateID=\"167\" />\r\n      <row certificateID=\"168\" />\r\n      <row
+        certificateID=\"172\" />\r\n      <row certificateID=\"176\" />\r\n      <row
+        certificateID=\"240\" />\r\n      <row certificateID=\"338\" />\r\n      <row
+        certificateID=\"175\" />\r\n      <row certificateID=\"53\" />\r\n      <row
+        certificateID=\"187\" />\r\n      <row certificateID=\"209\" />\r\n      <row
+        certificateID=\"20\" />\r\n      <row certificateID=\"24\" />\r\n      <row
+        certificateID=\"25\" />\r\n      <row certificateID=\"30\" />\r\n      <row
+        certificateID=\"31\" />\r\n      <row certificateID=\"42\" />\r\n      <row
+        certificateID=\"43\" />\r\n      <row certificateID=\"302\" />\r\n      <row
+        certificateID=\"320\" />\r\n      <row certificateID=\"356\" />\r\n      <row
+        certificateID=\"362\" />\r\n      <row certificateID=\"9\" />\r\n      <row
+        certificateID=\"15\" />\r\n      <row certificateID=\"283\" />\r\n      <row
+        certificateID=\"330\" />\r\n      <row certificateID=\"205\" />\r\n      <row
+        certificateID=\"14\" />\r\n      <row certificateID=\"27\" />\r\n      <row
+        certificateID=\"45\" />\r\n      <row certificateID=\"203\" />\r\n      <row
+        certificateID=\"350\" />\r\n    </rowset>\r\n    <rowset name=\"corporationRoles\"
+        key=\"roleID\" columns=\"roleID,roleName\" />\r\n    <rowset name=\"corporationRolesAtHQ\"
+        key=\"roleID\" columns=\"roleID,roleName\" />\r\n    <rowset name=\"corporationRolesAtBase\"
+        key=\"roleID\" columns=\"roleID,roleName\" />\r\n    <rowset name=\"corporationRolesAtOther\"
+        key=\"roleID\" columns=\"roleID,roleName\" />\r\n    <rowset name=\"corporationTitles\"
+        key=\"titleID\" columns=\"titleID,titleName\" />\r\n  </result>\r\n  <cachedUntil>2013-03-08
+        13:52:15</cachedUntil>\r\n</eveapi>"
+    http_version: '1.1'
+  recorded_at: Fri, 08 Mar 2013 13:44:15 GMT
 recorded_with: VCR 2.4.0

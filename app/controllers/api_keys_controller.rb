@@ -76,7 +76,13 @@ class ApiKeysController < ApplicationController
     @api_key.populate_char_sheet
 
     respond_to do |format|
-      format.html { redirect_to @api_key }
+      if @api_key.touch(params[:api_key])
+        format.html { redirect_to @api_key, notice: 'Api key was successfully updated.' }
+        format.json { head :no_content }
+      else
+        format.html { render action: "edit" }
+        format.json { render json: @api_key.errors, status: :unprocessable_entity }
+      end
     end
   end
 end

@@ -34,19 +34,21 @@ class ApiKey < ActiveRecord::Base
   attr_accessible :id, :verification_code, :eve_api_identifier, :char_sheet
   attr_accessible :user_id
 
+  before_save :populate_char_sheet
+
   def populate_char_sheet
     self.char_sheet = get_api_results_for("CharacterSheet")
-    save
+    # save
+    # TODO: This used to save, now it doesn't - does this change the associated
+    # api_key controller method "pull_data's" role?
   end
 
   def character_name
-    api = get_api_results_for("CharacterSheet")
-    character_name = get_character_name(api)
+    character_name = get_character_name(char_sheet)
   end
 
   def character_attributes
-    api = get_api_results_for("CharacterSheet")
-    attributes = get_attributes(api)
+    attributes = get_attributes(char_sheet)
   end
 
   def skill_in_training?

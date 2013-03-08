@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe ApiKeysController do
+describe ApiKeysController, :vcr do
 
   login_user
 
@@ -142,7 +142,7 @@ describe ApiKeysController do
   end
 
   describe "pull_data" do
-    it "udpates api_key.char_data with data from Eve online", :vcr, record: :all do
+    it "udpates api_key.char_data with data from Eve online" do
       api_key = FactoryGirl.create(:api_key, :skill_is_training)
       # Assuming there are no other api_keys in the database. . .
       ApiKey.any_instance.should_receive(:populate_char_sheet)
@@ -150,7 +150,17 @@ describe ApiKeysController do
       ApiKey.any_instance.should_not be_nil 
     end
 
-    it "should redirect to the api_key after a successful pull of api data", :vcr, record: :all do
+    it "saves api_key.char_data changes using touch" do
+      api_key = FactoryGirl.create(:api_key, :skill_is_training)
+      put :pull_data, {:id => api_key.to_param}
+      # Assuming there are no other api_keys in the database. . .
+      # the chosen ApiKey should have received changes, thus making
+      # it not equal to the original api_key value above
+      ApiKey.any_instance.should_not == api_key
+      ApiKey.any_instance.should_not be_nil 
+    end
+
+    it "should redirect to the api_key after a successful pull of api data" do
       api_key = FactoryGirl.create(:api_key, :skill_is_training)
       put :pull_data, {:id => api_key.to_param}
       response.should redirect_to(api_key)

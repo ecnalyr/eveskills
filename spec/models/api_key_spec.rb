@@ -52,7 +52,7 @@ describe "Api_key", :vcr do
   context "#name_of_skill_in_training" do
     it "should return the trainingTypeID of a skill if there is a skill in training" do
       api_key = FactoryGirl.create(:api_key, :skill_is_training)
-      api_key.name_of_skill_in_training.should == "3320"
+      api_key.name_of_skill_in_training.should == "13278"
     end
 
     it "should return nil if there is no skill in training" do
@@ -64,7 +64,7 @@ describe "Api_key", :vcr do
   context "#current_skill_training_end_time" do
     it "should return a training end time if there is a skill in training" do
       api_key = FactoryGirl.create(:api_key, :skill_is_training)
-      api_key.current_skill_training_end_time.should == "2013-03-06 22:04:00 UTC"
+      api_key.current_skill_training_end_time.should == "2013-03-09 01:50:34 UTC"
     end
 
     it "should return nil if there is no skill in training" do
@@ -77,7 +77,7 @@ describe "Api_key", :vcr do
     it "should return the list of skills that are in training" do
       api_key = FactoryGirl.create(:api_key, :skill_is_training)
       api_key.training_queue.should == 
-      [{:queuePosition=>"0", :typeID=>"20495", :level=>"3", :startSP=>"2829", :endSP=>"16000", :startTime=>"2013-03-04 16:25:50", :endTime=>"2013-03-05 01:02:20"}, {:queuePosition=>"1", :typeID=>"19767", :level=>"4", :startSP=>"40000", :endSP=>"226275", :startTime=>"2013-03-05 01:02:20", :endTime=>"2013-03-07 06:40:31"}]
+      [{:queuePosition=>"0", :typeID=>"13278", :level=>"4", :startSP=>"24000", :endSP=>"135765", :startTime=>"2013-03-07 00:10:10", :endTime=>"2013-03-09 01:50:34"}]
     end
   end
 
