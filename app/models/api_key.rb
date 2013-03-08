@@ -34,7 +34,9 @@ class ApiKey < ActiveRecord::Base
   attr_accessible :id, :verification_code, :eve_api_identifier, :char_sheet
   attr_accessible :user_id
 
-  before_save :populate_char_sheet
+  cattr_accessor :skip_callbacks
+
+  before_save :populate_char_sheet, :unless => :skip_callbacks
 
   def populate_char_sheet
     self.char_sheet = get_api_results_for("CharacterSheet")

@@ -21,11 +21,11 @@ http_interactions:
       content-type:
       - application/xml; charset=utf-8
       date:
-      - Fri, 08 Mar 2013 13:41:54 GMT
+      - Fri, 08 Mar 2013 14:04:41 GMT
     body:
       encoding: US-ASCII
       string: ! "<?xml version='1.0' encoding='UTF-8'?>\r\n<eveapi version=\"2\">\r\n
-        \ <currentTime>2013-03-08 13:41:55</currentTime>\r\n  <result>\r\n    <characterID>1725191100</characterID>\r\n
+        \ <currentTime>2013-03-08 14:04:42</currentTime>\r\n  <result>\r\n    <characterID>1725191100</characterID>\r\n
         \   <name>Alba Tross</name>\r\n    <DoB>2008-03-04 13:54:00</DoB>\r\n    <race>Gallente</race>\r\n
         \   <bloodLine>Intaki</bloodLine>\r\n    <ancestry>Reborn</ancestry>\r\n    <gender>Female</gender>\r\n
         \   <corporationName>Dreddit</corporationName>\r\n    <corporationID>1018389948</corporationID>\r\n
@@ -258,9 +258,9 @@ http_interactions:
         key=\"roleID\" columns=\"roleID,roleName\" />\r\n    <rowset name=\"corporationRolesAtOther\"
         key=\"roleID\" columns=\"roleID,roleName\" />\r\n    <rowset name=\"corporationTitles\"
         key=\"titleID\" columns=\"titleID,titleName\" />\r\n  </result>\r\n  <cachedUntil>2013-03-08
-        13:52:15</cachedUntil>\r\n</eveapi>"
+        14:10:47</cachedUntil>\r\n</eveapi>"
     http_version: '1.1'
-  recorded_at: Fri, 08 Mar 2013 13:41:59 GMT
+  recorded_at: Fri, 08 Mar 2013 14:04:46 GMT
 - request:
     method: get
     uri: https://api.eveonline.com/char/CharacterSheet.xml.aspx?keyID=1867200&vCode=oReWk9nG5QutSKn03RINpBXajnDtU2egla3uTr4dLQDV4kVTeQodWgy1He7ECeU4
@@ -282,11 +282,11 @@ http_interactions:
       content-type:
       - application/xml; charset=utf-8
       date:
-      - Fri, 08 Mar 2013 13:42:16 GMT
+      - Fri, 08 Mar 2013 14:04:42 GMT
     body:
       encoding: US-ASCII
       string: ! "<?xml version='1.0' encoding='UTF-8'?>\r\n<eveapi version=\"2\">\r\n
-        \ <currentTime>2013-03-08 13:42:16</currentTime>\r\n  <result>\r\n    <characterID>1725191100</characterID>\r\n
+        \ <currentTime>2013-03-08 14:04:43</currentTime>\r\n  <result>\r\n    <characterID>1725191100</characterID>\r\n
         \   <name>Alba Tross</name>\r\n    <DoB>2008-03-04 13:54:00</DoB>\r\n    <race>Gallente</race>\r\n
         \   <bloodLine>Intaki</bloodLine>\r\n    <ancestry>Reborn</ancestry>\r\n    <gender>Female</gender>\r\n
         \   <corporationName>Dreddit</corporationName>\r\n    <corporationID>1018389948</corporationID>\r\n
@@ -519,9 +519,9 @@ http_interactions:
         key=\"roleID\" columns=\"roleID,roleName\" />\r\n    <rowset name=\"corporationRolesAtOther\"
         key=\"roleID\" columns=\"roleID,roleName\" />\r\n    <rowset name=\"corporationTitles\"
         key=\"titleID\" columns=\"titleID,titleName\" />\r\n  </result>\r\n  <cachedUntil>2013-03-08
-        13:52:15</cachedUntil>\r\n</eveapi>"
+        14:10:47</cachedUntil>\r\n</eveapi>"
     http_version: '1.1'
-  recorded_at: Fri, 08 Mar 2013 13:42:21 GMT
+  recorded_at: Fri, 08 Mar 2013 14:04:47 GMT
 - request:
     method: get
     uri: https://api.eveonline.com/char/CharacterSheet.xml.aspx?keyID=1867200&vCode=oReWk9nG5QutSKn03RINpBXajnDtU2egla3uTr4dLQDV4kVTeQodWgy1He7ECeU4
@@ -543,11 +543,11 @@ http_interactions:
       content-type:
       - application/xml; charset=utf-8
       date:
-      - Fri, 08 Mar 2013 13:42:16 GMT
+      - Fri, 08 Mar 2013 14:06:18 GMT
     body:
       encoding: US-ASCII
       string: ! "<?xml version='1.0' encoding='UTF-8'?>\r\n<eveapi version=\"2\">\r\n
-        \ <currentTime>2013-03-08 13:42:17</currentTime>\r\n  <result>\r\n    <characterID>1725191100</characterID>\r\n
+        \ <currentTime>2013-03-08 14:06:18</currentTime>\r\n  <result>\r\n    <characterID>1725191100</characterID>\r\n
         \   <name>Alba Tross</name>\r\n    <DoB>2008-03-04 13:54:00</DoB>\r\n    <race>Gallente</race>\r\n
         \   <bloodLine>Intaki</bloodLine>\r\n    <ancestry>Reborn</ancestry>\r\n    <gender>Female</gender>\r\n
         \   <corporationName>Dreddit</corporationName>\r\n    <corporationID>1018389948</corporationID>\r\n
@@ -780,7 +780,7 @@ http_interactions:
         key=\"roleID\" columns=\"roleID,roleName\" />\r\n    <rowset name=\"corporationRolesAtOther\"
         key=\"roleID\" columns=\"roleID,roleName\" />\r\n    <rowset name=\"corporationTitles\"
         key=\"titleID\" columns=\"titleID,titleName\" />\r\n  </result>\r\n  <cachedUntil>2013-03-08
-        13:52:15</cachedUntil>\r\n</eveapi>"
+        14:10:47</cachedUntil>\r\n</eveapi>"
     http_version: '1.1'
-  recorded_at: Fri, 08 Mar 2013 13:42:21 GMT
+  recorded_at: Fri, 08 Mar 2013 14:06:23 GMT
 recorded_with: VCR 2.4.0

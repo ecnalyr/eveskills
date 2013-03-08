@@ -74,9 +74,13 @@ class ApiKeysController < ApplicationController
   def pull_data
     @api_key = ApiKey.find(params[:id])
     @api_key.populate_char_sheet
+    @api_key.skip_callbacks = true #because before_save calls populate_char_sheet
+    # I never set the above value back to false because I am of the understanding
+    # that this class attribute only persists for this instance, as long as it is
+    # not used again this instance, this should not be a problem.
 
     respond_to do |format|
-      if @api_key.touch(params[:api_key])
+      if @api_key.update_attributes(params[:api_key])
         format.html { redirect_to @api_key, notice: 'Api key was successfully updated.' }
         format.json { head :no_content }
       else
