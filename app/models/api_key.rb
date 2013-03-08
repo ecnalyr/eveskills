@@ -26,6 +26,8 @@ require 'Nokogiri'
 
 class ApiKey < ActiveRecord::Base
   validates_presence_of :user_id, :verification_code, :eve_api_identifier
+#we need to validate that the key's have no spaces
+
 
   belongs_to :user
   
@@ -74,7 +76,8 @@ class ApiKey < ActiveRecord::Base
   private
 
       def get_api_results_for(specific_api)
-        api_reults = Nokogiri.XML(open("https://api.eveonline.com/char/#{specific_api}.xml.aspx?keyID=#{self.eve_api_identifier}&vCode=#{self.verification_code}"))    
+        api_results = Nokogiri.XML(open("https://api.eveonline.com/char/#{specific_api}.xml.aspx?keyID=#{self.eve_api_identifier}&vCode=#{self.verification_code}")) 
+        api_results.at("//result/*") ? api_results : nil
       end
 
       def get_character_name(api)

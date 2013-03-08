@@ -6,6 +6,11 @@ FactoryGirl.define do
     verification_code "MyString"
     user
 
+    trait :invalid_key do
+      eve_api_identifier "MyString"
+      verification_code "MyString"
+    end
+
     trait :skill_is_training do
       eve_api_identifier "1867200"
       verification_code "oReWk9nG5QutSKn03RINpBXajnDtU2egla3uTr4dLQDV4kVTeQodWgy1He7ECeU4"

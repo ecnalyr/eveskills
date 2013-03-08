@@ -87,6 +87,13 @@ describe "Api_key", :vcr do
       api_key.populate_char_sheet
       api_key.char_sheet.should_not be_nil
     end
+
+    it "should not populate char_sheet with anything when api_key is invalid" do
+      api_key = FactoryGirl.create(:api_key, :invalid_key)
+      api_key.populate_char_sheet
+      api_key.char_sheet.should == nil
+    end
+
   end
 
 end
