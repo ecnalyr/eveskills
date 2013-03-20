@@ -42,6 +42,10 @@ class ApiKey < ActiveRecord::Base
     self.char_sheet = get_api_results_for("CharacterSheet")
   end
 
+  def char_sheet_is_valid?
+    self.char_sheet.nil? ? false : true
+  end
+
   def character_name
     character_name = get_character_name(char_sheet)
   end
@@ -78,6 +82,7 @@ class ApiKey < ActiveRecord::Base
 
       def get_api_results_for(specific_api)
         api_results = Nokogiri.XML(open("https://api.eveonline.com/char/#{specific_api}.xml.aspx?keyID=#{self.eve_api_identifier}&vCode=#{self.verification_code}")) 
+        pp api_results.at("//result/*")
         api_results.at("//result/*") ? api_results : nil
       end
 

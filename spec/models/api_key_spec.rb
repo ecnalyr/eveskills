@@ -93,7 +93,20 @@ describe "Api_key", :vcr do
       api_key.populate_char_sheet
       api_key.char_sheet.should == nil
     end
-
   end
+
+  context "#char_sheet_is_valid?", :vcr, record: :all do
+    it "should return false if char_sheet is not valid" do
+      api_key = FactoryGirl.create(:api_key)
+      api_key.char_sheet_is_valid?.should == false
+    end
+
+    it "should return true if char_sheet is valid" do
+      api_key = FactoryGirl.create(:api_key, :skill_not_training)
+      api_key.populate_char_sheet #loads a valid char sheet from the api key
+      api_key.char_sheet_is_valid?.should == true
+    end    
+  end
+
 
 end
