@@ -8,20 +8,9 @@
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
 #  eve_api_identifier :string(255)
-#  char_sheet         :string(255)
+#  char_sheet         :text(4294967296)
 #
 
-# == Schema Information
-#
-# Table name: api_keys
-#
-#  id                 :integer          not null, primary key
-#  verification_code  :string(255)
-#  user_id            :integer
-#  created_at         :datetime         not null
-#  updated_at         :datetime         not null
-#  eve_api_identifier :string(255)
-#
 require 'Nokogiri'
 
 class ApiKey < ActiveRecord::Base
@@ -47,34 +36,34 @@ class ApiKey < ActiveRecord::Base
   end
 
   def character_name
-    character_name = get_character_name(char_sheet)
+    character_name = get_character_name(Nokogiri::XML(char_sheet))
   end
 
   def character_attributes
-    attributes = get_attributes(char_sheet)
+    attributes = get_attributes(Nokogiri::XML(char_sheet))
   end
 
   def skill_in_training?
-    api = get_api_results_for("SkillInTraining")
+    api = Nokogiri::XML(get_api_results_for("SkillInTraining"))
     is_skill_in_training(api)
   end
 
   def name_of_skill_in_training
-    api = get_api_results_for("SkillInTraining")
+    api = Nokogiri::XML(get_api_results_for("SkillInTraining"))
     if skill_in_training?
       get_name_of_skill_in_training(api)
     end
   end
 
   def current_skill_training_end_time
-    api = get_api_results_for("SkillInTraining")
+    api = Nokogiri::XML(get_api_results_for("SkillInTraining"))
     if skill_in_training?
       get_skill_training_end_time(api)
     end
   end
 
   def training_queue
-    api = get_api_results_for("SkillQueue")
+    api = Nokogiri::XML(get_api_results_for("SkillQueue"))
     skill_in_training? ? get_training_queue(api) : []
   end
 
@@ -82,8 +71,7 @@ class ApiKey < ActiveRecord::Base
 
       def get_api_results_for(specific_api)
         api_results = Nokogiri.XML(open("https://api.eveonline.com/char/#{specific_api}.xml.aspx?keyID=#{self.eve_api_identifier}&vCode=#{self.verification_code}")) 
-        pp api_results.at("//result/*")
-        api_results.at("//result/*") ? api_results : nil
+        api_results.at("//result/*") ? api_results.to_s : nil
       end
 
       def get_character_name(api)

@@ -8,7 +8,7 @@
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
 #  eve_api_identifier :string(255)
-#  char_sheet         :string(255)
+#  char_sheet         :text(4294967296)
 #
 
 require 'spec_helper'
@@ -84,13 +84,15 @@ describe "Api_key", :vcr do
   context "#populate_char_sheet" do
     it "should populate char_sheet with xml data from an Eve api" do
       api_key = FactoryGirl.create(:api_key, :skill_is_training)
-      api_key.populate_char_sheet
+      # the below function is now called via a callback
+      # api_key.populate_char_sheet
       api_key.char_sheet.should_not be_nil
     end
 
     it "should not populate char_sheet with anything when api_key is invalid" do
       api_key = FactoryGirl.create(:api_key, :invalid_key)
-      api_key.populate_char_sheet
+      # the below function is now called via a callback
+      # api_key.populate_char_sheet
       api_key.char_sheet.should == nil
     end
   end

@@ -9,6 +9,8 @@
     <th></th>
     <th></th>
     <th></th>
+    <th></th>
+
   </tr>
 
 <% @api_keys.each do |api_key| %>
@@ -20,6 +22,7 @@
     <td><%= link_to 'Show', api_key %></td>
     <td><%= link_to 'Edit', edit_api_key_path(api_key) %></td>
     <td><%= link_to 'Destroy', api_key, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <th><%= link_to 'pull_data', api_key, method: :put %></th>
   </tr>
 <% end %>
 </table>
