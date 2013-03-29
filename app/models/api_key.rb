@@ -44,26 +44,26 @@ class ApiKey < ActiveRecord::Base
   end
 
   def skill_in_training?
-    api = Nokogiri::XML(get_api_results_for("SkillInTraining"))
+    api = xml_version(get_api_results_for("SkillInTraining"))
     is_skill_in_training(api)
   end
 
   def name_of_skill_in_training
-    api = Nokogiri::XML(get_api_results_for("SkillInTraining"))
+    api = xml_version(get_api_results_for("SkillInTraining"))
     if skill_in_training?
       get_name_of_skill_in_training(api)
     end
   end
 
   def current_skill_training_end_time
-    api = Nokogiri::XML(get_api_results_for("SkillInTraining"))
+    api = xml_version(get_api_results_for("SkillInTraining"))
     if skill_in_training?
       get_skill_training_end_time(api)
     end
   end
 
   def training_queue
-    api = Nokogiri::XML(get_api_results_for("SkillQueue"))
+    api = xml_version(get_api_results_for("SkillQueue"))
     skill_in_training? ? get_training_queue(api) : []
   end
 
