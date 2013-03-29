@@ -159,7 +159,7 @@ describe ApiKeysController, :vcr do
 
       #this is a weak test, it only checks if a value has been changed,
       # it does not check if the skill was actually changed.
-      #TODO: Improve test
+      #TODO: Improve test, also needs to test skill_sheet and training_queue changes
       ApiKey.any_instance.should_not == api_key
       ApiKey.any_instance.should_not be_nil 
     end
@@ -168,6 +168,14 @@ describe ApiKeysController, :vcr do
       api_key = FactoryGirl.create(:api_key, :skill_is_training)
       # Assuming there are no other api_keys in the database. . .
       ApiKey.any_instance.should_receive(:populate_skill_sheet)
+      put :pull_data, {:id => api_key.to_param}
+      ApiKey.any_instance.should_not be_nil 
+    end
+
+    it "udpates api_key.training_queue with data from Eve online" do
+      api_key = FactoryGirl.create(:api_key, :skill_is_training)
+      # Assuming there are no other api_keys in the database. . .
+      ApiKey.any_instance.should_receive(:populate_training_queue)
       put :pull_data, {:id => api_key.to_param}
       ApiKey.any_instance.should_not be_nil 
     end

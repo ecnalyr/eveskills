@@ -27,7 +27,7 @@ class ApiKey < ActiveRecord::Base
 
   cattr_accessor :skip_callbacks
 
-  before_save :populate_char_sheet, :populate_skill_sheet, :unless => :skip_callbacks
+  before_save :populate_char_sheet, :populate_skill_sheet, :populate_training_queue, :unless => :skip_callbacks
 
   def populate_char_sheet
     self.char_sheet = get_api_results_for("CharacterSheet")
@@ -37,12 +37,20 @@ class ApiKey < ActiveRecord::Base
     self.skill_sheet = get_api_results_for("SkillInTraining")
   end
 
+  def populate_training_queue
+    self.training_queue = get_api_results_for("SkillQueue")
+  end
+
   def char_sheet_is_valid?
     self.char_sheet.nil? ? false : true
   end
 
   def skill_sheet_is_valid?
     self.skill_sheet.nil? ? false : true
+  end
+
+  def training_queue_is_valid?
+    self.training_queue.nil? ? false : true
   end
 
   def character_name
@@ -72,8 +80,8 @@ class ApiKey < ActiveRecord::Base
     end
   end
 
-  def training_queue
-    api = xml_version(get_api_results_for("SkillQueue"))
+  def skill_training_queue
+    api = xml_version(training_queue)
     skill_in_training? ? get_training_queue(api) : []
   end
 

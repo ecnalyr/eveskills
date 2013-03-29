@@ -75,10 +75,10 @@ describe "Api_key", :vcr do
     end
   end
 
-  context "#training_queue" do
+  context "#skill_training_queue", :vcr, record: :all do
     it "should return the list of skills that are in training" do
       api_key = FactoryGirl.create(:api_key, :skill_is_training)
-      api_key.training_queue.should == 
+      api_key.skill_training_queue.should == 
       [{:queuePosition=>"0", :typeID=>"11083", :level=>"3", :startSP=>"4243", :endSP=>"24000", :startTime=>"2013-03-29 09:32:57", :endTime=>"2013-03-29 22:27:44"}]
     end
   end
@@ -107,7 +107,7 @@ describe "Api_key", :vcr do
 
     it "should return true if char_sheet is valid" do
       api_key = FactoryGirl.create(:api_key, :skill_not_training)
-      api_key.populate_char_sheet #loads a valid char sheet from the api key
+      api_key.populate_char_sheet
       api_key.char_sheet_is_valid?.should == true
     end    
   end
@@ -120,8 +120,21 @@ describe "Api_key", :vcr do
 
     it "should return true if skill_sheet is valid" do
       api_key = FactoryGirl.create(:api_key, :skill_not_training)
-      api_key.populate_char_sheet #loads a valid char sheet from the api key
+      api_key.populate_char_sheet
       api_key.skill_sheet_is_valid?.should == true
+    end    
+  end
+
+  context "#training_queue_is_valid?" do
+    it "should return false if training_queue is not valid" do
+      api_key = FactoryGirl.create(:api_key)
+      api_key.training_queue_is_valid?.should == false
+    end
+
+    it "should return true if skill_sheet is valid" do
+      api_key = FactoryGirl.create(:api_key, :skill_not_training)
+      api_key.populate_training_queue
+      api_key.training_queue_is_valid?.should == true
     end    
   end
 
@@ -136,6 +149,4 @@ describe "Api_key", :vcr do
       api_key.skill_sheet.should == nil
     end
   end
-
-
 end

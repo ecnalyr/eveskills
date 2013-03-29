@@ -21,11 +21,11 @@ http_interactions:
       content-type:
       - application/xml; charset=utf-8
       date:
-      - Fri, 29 Mar 2013 14:58:07 GMT
+      - Fri, 29 Mar 2013 15:33:47 GMT
     body:
       encoding: US-ASCII
       string: ! "<?xml version='1.0' encoding='UTF-8'?>\r\n<eveapi version=\"2\">\r\n
-        \ <currentTime>2013-03-29 14:58:07</currentTime>\r\n  <result>\r\n    <characterID>1725191100</characterID>\r\n
+        \ <currentTime>2013-03-29 15:33:48</currentTime>\r\n  <result>\r\n    <characterID>1725191100</characterID>\r\n
         \   <name>Alba Tross</name>\r\n    <DoB>2008-03-04 13:54:00</DoB>\r\n    <race>Gallente</race>\r\n
         \   <bloodLine>Intaki</bloodLine>\r\n    <ancestry>Reborn</ancestry>\r\n    <gender>Female</gender>\r\n
         \   <corporationName>Dreddit</corporationName>\r\n    <corporationID>1018389948</corporationID>\r\n
@@ -263,9 +263,9 @@ http_interactions:
         key=\"roleID\" columns=\"roleID,roleName\" />\r\n    <rowset name=\"corporationRolesAtOther\"
         key=\"roleID\" columns=\"roleID,roleName\" />\r\n    <rowset name=\"corporationTitles\"
         key=\"titleID\" columns=\"titleID,titleName\" />\r\n  </result>\r\n  <cachedUntil>2013-03-29
-        15:11:45</cachedUntil>\r\n</eveapi>"
+        15:38:20</cachedUntil>\r\n</eveapi>"
     http_version: '1.1'
-  recorded_at: Fri, 29 Mar 2013 14:58:07 GMT
+  recorded_at: Fri, 29 Mar 2013 15:33:48 GMT
 - request:
     method: get
     uri: https://api.eveonline.com/char/CharacterSheet.xml.aspx?keyID=1867200&vCode=oReWk9nG5QutSKn03RINpBXajnDtU2egla3uTr4dLQDV4kVTeQodWgy1He7ECeU4
@@ -287,11 +287,11 @@ http_interactions:
       content-type:
       - application/xml; charset=utf-8
       date:
-      - Fri, 29 Mar 2013 15:06:33 GMT
+      - Fri, 29 Mar 2013 15:41:04 GMT
     body:
       encoding: US-ASCII
       string: ! "<?xml version='1.0' encoding='UTF-8'?>\r\n<eveapi version=\"2\">\r\n
-        \ <currentTime>2013-03-29 15:06:34</currentTime>\r\n  <result>\r\n    <characterID>1725191100</characterID>\r\n
+        \ <currentTime>2013-03-29 15:41:04</currentTime>\r\n  <result>\r\n    <characterID>1725191100</characterID>\r\n
         \   <name>Alba Tross</name>\r\n    <DoB>2008-03-04 13:54:00</DoB>\r\n    <race>Gallente</race>\r\n
         \   <bloodLine>Intaki</bloodLine>\r\n    <ancestry>Reborn</ancestry>\r\n    <gender>Female</gender>\r\n
         \   <corporationName>Dreddit</corporationName>\r\n    <corporationID>1018389948</corporationID>\r\n
@@ -529,9 +529,9 @@ http_interactions:
         key=\"roleID\" columns=\"roleID,roleName\" />\r\n    <rowset name=\"corporationRolesAtOther\"
         key=\"roleID\" columns=\"roleID,roleName\" />\r\n    <rowset name=\"corporationTitles\"
         key=\"titleID\" columns=\"titleID,titleName\" />\r\n  </result>\r\n  <cachedUntil>2013-03-29
-        15:11:45</cachedUntil>\r\n</eveapi>"
+        15:55:42</cachedUntil>\r\n</eveapi>"
     http_version: '1.1'
-  recorded_at: Fri, 29 Mar 2013 15:06:34 GMT
+  recorded_at: Fri, 29 Mar 2013 15:41:04 GMT
 - request:
     method: get
     uri: https://api.eveonline.com/char/SkillInTraining.xml.aspx?keyID=1867200&vCode=oReWk9nG5QutSKn03RINpBXajnDtU2egla3uTr4dLQDV4kVTeQodWgy1He7ECeU4
@@ -553,19 +553,51 @@ http_interactions:
       content-type:
       - application/xml; charset=utf-8
       date:
-      - Fri, 29 Mar 2013 15:06:34 GMT
+      - Fri, 29 Mar 2013 15:41:04 GMT
     body:
       encoding: US-ASCII
       string: ! "<?xml version='1.0' encoding='UTF-8'?>\r\n<eveapi version=\"2\">\r\n
-        \ <currentTime>2013-03-29 15:06:35</currentTime>\r\n  <result>\r\n    <currentTQTime
-        offset=\"0\">2013-03-29 15:06:35</currentTQTime>\r\n    <trainingEndTime>2013-03-29
+        \ <currentTime>2013-03-29 15:41:04</currentTime>\r\n  <result>\r\n    <currentTQTime
+        offset=\"0\">2013-03-29 15:41:04</currentTQTime>\r\n    <trainingEndTime>2013-03-29
         22:27:44</trainingEndTime>\r\n    <trainingStartTime>2013-03-29 09:32:57</trainingStartTime>\r\n
         \   <trainingTypeID>11083</trainingTypeID>\r\n    <trainingStartSP>4243</trainingStartSP>\r\n
         \   <trainingDestinationSP>24000</trainingDestinationSP>\r\n    <trainingToLevel>3</trainingToLevel>\r\n
         \   <skillInTraining>1</skillInTraining>\r\n  </result>\r\n  <cachedUntil>2013-03-29
-        15:38:20</cachedUntil>\r\n</eveapi>"
+        16:35:24</cachedUntil>\r\n</eveapi>"
     http_version: '1.1'
-  recorded_at: Fri, 29 Mar 2013 15:06:35 GMT
+  recorded_at: Fri, 29 Mar 2013 15:41:04 GMT
+- request:
+    method: get
+    uri: https://api.eveonline.com/char/SkillQueue.xml.aspx?keyID=1867200&vCode=oReWk9nG5QutSKn03RINpBXajnDtU2egla3uTr4dLQDV4kVTeQodWgy1He7ECeU4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      transfer-encoding:
+      - chunked
+      content-type:
+      - application/xml; charset=utf-8
+      date:
+      - Fri, 29 Mar 2013 15:41:05 GMT
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version='1.0' encoding='UTF-8'?>\r\n<eveapi version=\"2\">\r\n
+        \ <currentTime>2013-03-29 15:41:05</currentTime>\r\n  <result>\r\n    <rowset
+        name=\"skillqueue\" key=\"queuePosition\" columns=\"queuePosition,typeID,level,startSP,endSP,startTime,endTime\">\r\n
+        \     <row queuePosition=\"0\" typeID=\"11083\" level=\"3\" startSP=\"4243\"
+        endSP=\"24000\" startTime=\"2013-03-29 09:32:57\" endTime=\"2013-03-29 22:27:44\"
+        />\r\n    </rowset>\r\n  </result>\r\n  <cachedUntil>2013-03-29 16:35:24</cachedUntil>\r\n</eveapi>"
+    http_version: '1.1'
+  recorded_at: Fri, 29 Mar 2013 15:41:05 GMT
 - request:
     method: get
     uri: https://api.eveonline.com/char/CharacterSheet.xml.aspx?keyID=1867200&vCode=oReWk9nG5QutSKn03RINpBXajnDtU2egla3uTr4dLQDV4kVTeQodWgy1He7ECeU4
@@ -587,11 +619,11 @@ http_interactions:
       content-type:
       - application/xml; charset=utf-8
       date:
-      - Fri, 29 Mar 2013 15:06:35 GMT
+      - Fri, 29 Mar 2013 15:41:06 GMT
     body:
       encoding: US-ASCII
       string: ! "<?xml version='1.0' encoding='UTF-8'?>\r\n<eveapi version=\"2\">\r\n
-        \ <currentTime>2013-03-29 15:06:35</currentTime>\r\n  <result>\r\n    <characterID>1725191100</characterID>\r\n
+        \ <currentTime>2013-03-29 15:41:06</currentTime>\r\n  <result>\r\n    <characterID>1725191100</characterID>\r\n
         \   <name>Alba Tross</name>\r\n    <DoB>2008-03-04 13:54:00</DoB>\r\n    <race>Gallente</race>\r\n
         \   <bloodLine>Intaki</bloodLine>\r\n    <ancestry>Reborn</ancestry>\r\n    <gender>Female</gender>\r\n
         \   <corporationName>Dreddit</corporationName>\r\n    <corporationID>1018389948</corporationID>\r\n
@@ -829,9 +861,9 @@ http_interactions:
         key=\"roleID\" columns=\"roleID,roleName\" />\r\n    <rowset name=\"corporationRolesAtOther\"
         key=\"roleID\" columns=\"roleID,roleName\" />\r\n    <rowset name=\"corporationTitles\"
         key=\"titleID\" columns=\"titleID,titleName\" />\r\n  </result>\r\n  <cachedUntil>2013-03-29
-        15:11:45</cachedUntil>\r\n</eveapi>"
+        15:55:42</cachedUntil>\r\n</eveapi>"
     http_version: '1.1'
-  recorded_at: Fri, 29 Mar 2013 15:06:36 GMT
+  recorded_at: Fri, 29 Mar 2013 15:41:06 GMT
 - request:
     method: get
     uri: https://api.eveonline.com/char/SkillInTraining.xml.aspx?keyID=1867200&vCode=oReWk9nG5QutSKn03RINpBXajnDtU2egla3uTr4dLQDV4kVTeQodWgy1He7ECeU4
@@ -853,17 +885,49 @@ http_interactions:
       content-type:
       - application/xml; charset=utf-8
       date:
-      - Fri, 29 Mar 2013 15:06:35 GMT
+      - Fri, 29 Mar 2013 15:41:06 GMT
     body:
       encoding: US-ASCII
       string: ! "<?xml version='1.0' encoding='UTF-8'?>\r\n<eveapi version=\"2\">\r\n
-        \ <currentTime>2013-03-29 15:06:36</currentTime>\r\n  <result>\r\n    <currentTQTime
-        offset=\"0\">2013-03-29 15:06:36</currentTQTime>\r\n    <trainingEndTime>2013-03-29
+        \ <currentTime>2013-03-29 15:41:06</currentTime>\r\n  <result>\r\n    <currentTQTime
+        offset=\"0\">2013-03-29 15:41:06</currentTQTime>\r\n    <trainingEndTime>2013-03-29
         22:27:44</trainingEndTime>\r\n    <trainingStartTime>2013-03-29 09:32:57</trainingStartTime>\r\n
         \   <trainingTypeID>11083</trainingTypeID>\r\n    <trainingStartSP>4243</trainingStartSP>\r\n
         \   <trainingDestinationSP>24000</trainingDestinationSP>\r\n    <trainingToLevel>3</trainingToLevel>\r\n
         \   <skillInTraining>1</skillInTraining>\r\n  </result>\r\n  <cachedUntil>2013-03-29
-        15:38:20</cachedUntil>\r\n</eveapi>"
+        16:35:24</cachedUntil>\r\n</eveapi>"
     http_version: '1.1'
-  recorded_at: Fri, 29 Mar 2013 15:06:36 GMT
+  recorded_at: Fri, 29 Mar 2013 15:41:07 GMT
+- request:
+    method: get
+    uri: https://api.eveonline.com/char/SkillQueue.xml.aspx?keyID=1867200&vCode=oReWk9nG5QutSKn03RINpBXajnDtU2egla3uTr4dLQDV4kVTeQodWgy1He7ECeU4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      transfer-encoding:
+      - chunked
+      content-type:
+      - application/xml; charset=utf-8
+      date:
+      - Fri, 29 Mar 2013 15:41:07 GMT
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version='1.0' encoding='UTF-8'?>\r\n<eveapi version=\"2\">\r\n
+        \ <currentTime>2013-03-29 15:41:07</currentTime>\r\n  <result>\r\n    <rowset
+        name=\"skillqueue\" key=\"queuePosition\" columns=\"queuePosition,typeID,level,startSP,endSP,startTime,endTime\">\r\n
+        \     <row queuePosition=\"0\" typeID=\"11083\" level=\"3\" startSP=\"4243\"
+        endSP=\"24000\" startTime=\"2013-03-29 09:32:57\" endTime=\"2013-03-29 22:27:44\"
+        />\r\n    </rowset>\r\n  </result>\r\n  <cachedUntil>2013-03-29 16:35:24</cachedUntil>\r\n</eveapi>"
+    http_version: '1.1'
+  recorded_at: Fri, 29 Mar 2013 15:41:08 GMT
 recorded_with: VCR 2.4.0
