@@ -36,11 +36,11 @@ class ApiKey < ActiveRecord::Base
   end
 
   def character_name
-    character_name = get_character_name(Nokogiri::XML(char_sheet))
+    character_name = get_character_name(xml_version(char_sheet))
   end
 
   def character_attributes
-    attributes = get_attributes(Nokogiri::XML(char_sheet))
+    attributes = get_attributes(xml_version(char_sheet))
   end
 
   def skill_in_training?
@@ -103,5 +103,9 @@ class ApiKey < ActiveRecord::Base
         api.xpath("//row").map do |row|
           Hash[ row.attributes.map { |k, v| [k.to_sym, v.to_s] } ]
         end
+      end
+
+      def xml_version string
+        Nokogiri::XML(string)
       end
 end
