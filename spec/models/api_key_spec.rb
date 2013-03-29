@@ -9,6 +9,7 @@
 #  updated_at         :datetime         not null
 #  eve_api_identifier :string(255)
 #  char_sheet         :text(4294967296)
+#  skill_sheet        :text(4294967296)
 #
 
 require 'spec_helper'
@@ -52,7 +53,7 @@ describe "Api_key", :vcr do
   context "#name_of_skill_in_training" do
     it "should return the trainingTypeID of a skill if there is a skill in training" do
       api_key = FactoryGirl.create(:api_key, :skill_is_training)
-      api_key.name_of_skill_in_training.should == "13278"
+      api_key.name_of_skill_in_training.should == "11083"
     end
 
     it "should return nil if there is no skill in training" do
@@ -64,7 +65,7 @@ describe "Api_key", :vcr do
   context "#current_skill_training_end_time" do
     it "should return a training end time if there is a skill in training" do
       api_key = FactoryGirl.create(:api_key, :skill_is_training)
-      api_key.current_skill_training_end_time.should == "2013-03-09 01:50:34 UTC"
+      api_key.current_skill_training_end_time.should == "2013-03-29 22:27:44 UTC"
     end
 
     it "should return nil if there is no skill in training" do
@@ -77,7 +78,7 @@ describe "Api_key", :vcr do
     it "should return the list of skills that are in training" do
       api_key = FactoryGirl.create(:api_key, :skill_is_training)
       api_key.training_queue.should == 
-      [{:queuePosition=>"0", :typeID=>"13278", :level=>"4", :startSP=>"24000", :endSP=>"135765", :startTime=>"2013-03-07 00:10:10", :endTime=>"2013-03-09 01:50:34"}]
+      [{:queuePosition=>"0", :typeID=>"11083", :level=>"3", :startSP=>"4243", :endSP=>"24000", :startTime=>"2013-03-29 09:32:57", :endTime=>"2013-03-29 22:27:44"}]
     end
   end
 
@@ -97,7 +98,7 @@ describe "Api_key", :vcr do
     end
   end
 
-  context "#char_sheet_is_valid?", :vcr, record: :all do
+  context "#char_sheet_is_valid?" do
     it "should return false if char_sheet is not valid" do
       api_key = FactoryGirl.create(:api_key)
       api_key.char_sheet_is_valid?.should == false
@@ -108,6 +109,18 @@ describe "Api_key", :vcr do
       api_key.populate_char_sheet #loads a valid char sheet from the api key
       api_key.char_sheet_is_valid?.should == true
     end    
+  end
+
+  context "#populate_skill_sheet" do
+    it "should populate skill_sheet with xml data from an Eve api" do
+      api_key = FactoryGirl.create(:api_key, :skill_is_training)
+      api_key.skill_sheet.should_not be_nil
+    end
+
+    it "should not populate skill_sheet with anything when api_key is invalid" do
+      api_key = FactoryGirl.create(:api_key, :invalid_key)
+      api_key.skill_sheet.should == nil
+    end
   end
 
 

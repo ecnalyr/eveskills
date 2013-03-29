@@ -90,7 +90,7 @@ describe ApiKeysController, :vcr do
         put :update, {:id => api_key.to_param, :api_key => { "verification_code" => "MyString" }}
       end
 
-      it "assigns the requested api_key as @api_key", :vcr do
+      it "assigns the requested api_key as @api_key" do
         api_key = FactoryGirl.create(:api_key)
         put :update, {:id => api_key.to_param, 
             :api_key => { "eve_api_identifier" => eve_api_identifier, 
@@ -99,7 +99,7 @@ describe ApiKeysController, :vcr do
         assigns(:api_key).should eq(api_key)
       end
 
-      it "redirects to the api_key", :vcr do
+      it "redirects to the api_key" do
         api_key = FactoryGirl.create(:api_key)
         put :update, {:id => api_key.id.to_param,
             :api_key => { "eve_api_identifier" => eve_api_identifier, 
@@ -142,7 +142,7 @@ describe ApiKeysController, :vcr do
   end
 
   describe "pull_data" do
-    it "udpates api_key.char_data with data from Eve online" do
+    it "udpates api_key.char_sheet with data from Eve online" do
       api_key = FactoryGirl.create(:api_key, :skill_is_training)
       # Assuming there are no other api_keys in the database. . .
       ApiKey.any_instance.should_receive(:populate_char_sheet)
@@ -150,13 +150,25 @@ describe ApiKeysController, :vcr do
       ApiKey.any_instance.should_not be_nil 
     end
 
-    it "saves api_key.char_data changes using touch" do
+    it "saves api_key.char_sheet changes" do
       api_key = FactoryGirl.create(:api_key, :skill_is_training)
       put :pull_data, {:id => api_key.to_param}
       # Assuming there are no other api_keys in the database. . .
       # the chosen ApiKey should have received changes, thus making
       # it not equal to the original api_key value above
+
+      #this is a weak test, it only checks if a value has been changed,
+      # it does not check if the skill was actually changed.
+      #TODO: Improve test
       ApiKey.any_instance.should_not == api_key
+      ApiKey.any_instance.should_not be_nil 
+    end
+
+    it "udpates api_key.skill_sheet with data from Eve online" do
+      api_key = FactoryGirl.create(:api_key, :skill_is_training)
+      # Assuming there are no other api_keys in the database. . .
+      ApiKey.any_instance.should_receive(:populate_skill_sheet)
+      put :pull_data, {:id => api_key.to_param}
       ApiKey.any_instance.should_not be_nil 
     end
 

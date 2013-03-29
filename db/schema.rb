@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130320183550) do
+ActiveRecord::Schema.define(:version => 20130329143622) do
 
   create_table "api_keys", :force => true do |t|
     t.string   "verification_code"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(:version => 20130320183550) do
     t.datetime "updated_at",                               :null => false
     t.string   "eve_api_identifier"
     t.text     "char_sheet",         :limit => 4294967296
+    t.text     "skill_sheet",        :limit => 4294967296
   end
 
   add_index "api_keys", ["user_id"], :name => "index_api_keys_on_user_id"

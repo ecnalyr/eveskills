@@ -9,6 +9,7 @@
 #  updated_at         :datetime         not null
 #  eve_api_identifier :string(255)
 #  char_sheet         :text(4294967296)
+#  skill_sheet        :text(4294967296)
 #
 
 require 'Nokogiri'
@@ -25,10 +26,14 @@ class ApiKey < ActiveRecord::Base
 
   cattr_accessor :skip_callbacks
 
-  before_save :populate_char_sheet, :unless => :skip_callbacks
+  before_save :populate_char_sheet, :populate_skill_sheet, :unless => :skip_callbacks
 
   def populate_char_sheet
     self.char_sheet = get_api_results_for("CharacterSheet")
+  end
+
+  def populate_skill_sheet
+    self.skill_sheet = get_api_results_for("SkillInTraining")
   end
 
   def char_sheet_is_valid?

@@ -74,6 +74,7 @@ class ApiKeysController < ApplicationController
   def pull_data
     @api_key = ApiKey.find(params[:id])
     @api_key.populate_char_sheet
+    @api_key.populate_skill_sheet
     @api_key.skip_callbacks = true #because before_save calls populate_char_sheet
     # I never set the above value back to false because I am of the understanding
     # that this class attribute only persists for this instance, as long as it is

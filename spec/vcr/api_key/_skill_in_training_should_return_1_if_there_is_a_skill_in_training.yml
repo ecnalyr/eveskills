@@ -21,17 +21,17 @@ http_interactions:
       content-type:
       - application/xml; charset=utf-8
       date:
-      - Fri, 08 Mar 2013 13:43:57 GMT
+      - Fri, 29 Mar 2013 14:46:49 GMT
     body:
       encoding: US-ASCII
       string: ! "<?xml version='1.0' encoding='UTF-8'?>\r\n<eveapi version=\"2\">\r\n
-        \ <currentTime>2013-03-08 13:43:57</currentTime>\r\n  <result>\r\n    <characterID>1725191100</characterID>\r\n
+        \ <currentTime>2013-03-29 14:46:50</currentTime>\r\n  <result>\r\n    <characterID>1725191100</characterID>\r\n
         \   <name>Alba Tross</name>\r\n    <DoB>2008-03-04 13:54:00</DoB>\r\n    <race>Gallente</race>\r\n
         \   <bloodLine>Intaki</bloodLine>\r\n    <ancestry>Reborn</ancestry>\r\n    <gender>Female</gender>\r\n
         \   <corporationName>Dreddit</corporationName>\r\n    <corporationID>1018389948</corporationID>\r\n
         \   <allianceName>Test Alliance Please Ignore</allianceName>\r\n    <allianceID>498125261</allianceID>\r\n
         \   <cloneName>Clone Grade Sigma</cloneName>\r\n    <cloneSkillPoints>92500000</cloneSkillPoints>\r\n
-        \   <balance>102102260.56</balance>\r\n    <attributeEnhancers />\r\n    <attributes>\r\n
+        \   <balance>100981040.56</balance>\r\n    <attributeEnhancers />\r\n    <attributes>\r\n
         \     <intelligence>27</intelligence>\r\n      <memory>21</memory>\r\n      <charisma>17</charisma>\r\n
         \     <perception>17</perception>\r\n      <willpower>17</willpower>\r\n    </attributes>\r\n
         \   <rowset name=\"skills\" key=\"typeID\" columns=\"typeID,skillpoints,level,published\">\r\n
@@ -139,9 +139,9 @@ http_interactions:
         />\r\n      <row typeID=\"3330\" skillpoints=\"90510\" level=\"4\" published=\"1\"
         />\r\n      <row typeID=\"3331\" skillpoints=\"90510\" level=\"4\" published=\"1\"
         />\r\n      <row typeID=\"3329\" skillpoints=\"90510\" level=\"4\" published=\"1\"
-        />\r\n      <row typeID=\"3405\" skillpoints=\"45255\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"3405\" skillpoints=\"256000\" level=\"5\" published=\"1\"
         />\r\n      <row typeID=\"24572\" skillpoints=\"452549\" level=\"4\" published=\"1\"
-        />\r\n      <row typeID=\"13278\" skillpoints=\"24000\" level=\"3\" published=\"1\"
+        />\r\n      <row typeID=\"13278\" skillpoints=\"135765\" level=\"4\" published=\"1\"
         />\r\n      <row typeID=\"3440\" skillpoints=\"1024000\" level=\"5\" published=\"1\"
         />\r\n      <row typeID=\"3335\" skillpoints=\"40000\" level=\"3\" published=\"1\"
         />\r\n      <row typeID=\"3334\" skillpoints=\"40000\" level=\"3\" published=\"1\"
@@ -200,6 +200,11 @@ http_interactions:
         />\r\n      <row typeID=\"3394\" skillpoints=\"512000\" level=\"5\" published=\"1\"
         />\r\n      <row typeID=\"26254\" skillpoints=\"24000\" level=\"3\" published=\"1\"
         />\r\n      <row typeID=\"19767\" skillpoints=\"226275\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"3303\" skillpoints=\"256000\" level=\"5\" published=\"1\"
+        />\r\n      <row typeID=\"3306\" skillpoints=\"135765\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"3305\" skillpoints=\"24000\" level=\"3\" published=\"1\"
+        />\r\n      <row typeID=\"12213\" skillpoints=\"135765\" level=\"4\" published=\"1\"
+        />\r\n      <row typeID=\"11083\" skillpoints=\"4243\" level=\"2\" published=\"1\"
         />\r\n    </rowset>\r\n    <rowset name=\"certificates\" key=\"certificateID\"
         columns=\"certificateID\">\r\n      <row certificateID=\"1\" />\r\n      <row
         certificateID=\"258\" />\r\n      <row certificateID=\"5\" />\r\n      <row
@@ -257,10 +262,10 @@ http_interactions:
         key=\"roleID\" columns=\"roleID,roleName\" />\r\n    <rowset name=\"corporationRolesAtBase\"
         key=\"roleID\" columns=\"roleID,roleName\" />\r\n    <rowset name=\"corporationRolesAtOther\"
         key=\"roleID\" columns=\"roleID,roleName\" />\r\n    <rowset name=\"corporationTitles\"
-        key=\"titleID\" columns=\"titleID,titleName\" />\r\n  </result>\r\n  <cachedUntil>2013-03-08
-        13:52:15</cachedUntil>\r\n</eveapi>"
+        key=\"titleID\" columns=\"titleID,titleName\" />\r\n  </result>\r\n  <cachedUntil>2013-03-29
+        14:56:19</cachedUntil>\r\n</eveapi>"
     http_version: '1.1'
-  recorded_at: Fri, 08 Mar 2013 13:44:01 GMT
+  recorded_at: Fri, 29 Mar 2013 14:46:55 GMT
 - request:
     method: get
     uri: https://api.eveonline.com/char/SkillInTraining.xml.aspx?keyID=1867200&vCode=oReWk9nG5QutSKn03RINpBXajnDtU2egla3uTr4dLQDV4kVTeQodWgy1He7ECeU4
@@ -282,17 +287,51 @@ http_interactions:
       content-type:
       - application/xml; charset=utf-8
       date:
-      - Fri, 08 Mar 2013 13:43:57 GMT
+      - Fri, 29 Mar 2013 14:46:50 GMT
     body:
       encoding: US-ASCII
       string: ! "<?xml version='1.0' encoding='UTF-8'?>\r\n<eveapi version=\"2\">\r\n
-        \ <currentTime>2013-03-08 13:43:58</currentTime>\r\n  <result>\r\n    <currentTQTime
-        offset=\"0\">2013-03-08 13:43:58</currentTQTime>\r\n    <trainingEndTime>2013-03-09
-        01:50:34</trainingEndTime>\r\n    <trainingStartTime>2013-03-07 00:10:10</trainingStartTime>\r\n
-        \   <trainingTypeID>13278</trainingTypeID>\r\n    <trainingStartSP>24000</trainingStartSP>\r\n
-        \   <trainingDestinationSP>135765</trainingDestinationSP>\r\n    <trainingToLevel>4</trainingToLevel>\r\n
-        \   <skillInTraining>1</skillInTraining>\r\n  </result>\r\n  <cachedUntil>2013-03-08
-        14:03:31</cachedUntil>\r\n</eveapi>"
+        \ <currentTime>2013-03-29 14:46:50</currentTime>\r\n  <result>\r\n    <currentTQTime
+        offset=\"0\">2013-03-29 14:46:50</currentTQTime>\r\n    <trainingEndTime>2013-03-29
+        22:27:44</trainingEndTime>\r\n    <trainingStartTime>2013-03-29 09:32:57</trainingStartTime>\r\n
+        \   <trainingTypeID>11083</trainingTypeID>\r\n    <trainingStartSP>4243</trainingStartSP>\r\n
+        \   <trainingDestinationSP>24000</trainingDestinationSP>\r\n    <trainingToLevel>3</trainingToLevel>\r\n
+        \   <skillInTraining>1</skillInTraining>\r\n  </result>\r\n  <cachedUntil>2013-03-29
+        15:38:20</cachedUntil>\r\n</eveapi>"
     http_version: '1.1'
-  recorded_at: Fri, 08 Mar 2013 13:44:02 GMT
+  recorded_at: Fri, 29 Mar 2013 14:46:55 GMT
+- request:
+    method: get
+    uri: https://api.eveonline.com/char/SkillInTraining.xml.aspx?keyID=1867200&vCode=oReWk9nG5QutSKn03RINpBXajnDtU2egla3uTr4dLQDV4kVTeQodWgy1He7ECeU4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      transfer-encoding:
+      - chunked
+      content-type:
+      - application/xml; charset=utf-8
+      date:
+      - Fri, 29 Mar 2013 14:46:50 GMT
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version='1.0' encoding='UTF-8'?>\r\n<eveapi version=\"2\">\r\n
+        \ <currentTime>2013-03-29 14:46:51</currentTime>\r\n  <result>\r\n    <currentTQTime
+        offset=\"0\">2013-03-29 14:46:51</currentTQTime>\r\n    <trainingEndTime>2013-03-29
+        22:27:44</trainingEndTime>\r\n    <trainingStartTime>2013-03-29 09:32:57</trainingStartTime>\r\n
+        \   <trainingTypeID>11083</trainingTypeID>\r\n    <trainingStartSP>4243</trainingStartSP>\r\n
+        \   <trainingDestinationSP>24000</trainingDestinationSP>\r\n    <trainingToLevel>3</trainingToLevel>\r\n
+        \   <skillInTraining>1</skillInTraining>\r\n  </result>\r\n  <cachedUntil>2013-03-29
+        15:38:20</cachedUntil>\r\n</eveapi>"
+    http_version: '1.1'
+  recorded_at: Fri, 29 Mar 2013 14:46:56 GMT
 recorded_with: VCR 2.4.0
