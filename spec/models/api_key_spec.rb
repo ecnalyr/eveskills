@@ -111,6 +111,19 @@ describe "Api_key", :vcr do
     end    
   end
 
+  context "#skill_sheet_is_valid?" do
+    it "should return false if char_sheet is not valid" do
+      api_key = FactoryGirl.create(:api_key)
+      api_key.skill_sheet_is_valid?.should == false
+    end
+
+    it "should return true if skill_sheet is valid" do
+      api_key = FactoryGirl.create(:api_key, :skill_not_training)
+      api_key.populate_char_sheet #loads a valid char sheet from the api key
+      api_key.skill_sheet_is_valid?.should == true
+    end    
+  end
+
   context "#populate_skill_sheet" do
     it "should populate skill_sheet with xml data from an Eve api" do
       api_key = FactoryGirl.create(:api_key, :skill_is_training)

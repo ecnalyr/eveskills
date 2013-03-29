@@ -40,6 +40,10 @@ class ApiKey < ActiveRecord::Base
     self.char_sheet.nil? ? false : true
   end
 
+  def skill_sheet_is_valid?
+    self.skill_sheet.nil? ? false : true
+  end
+
   def character_name
     character_name = get_character_name(xml_version(char_sheet))
   end
