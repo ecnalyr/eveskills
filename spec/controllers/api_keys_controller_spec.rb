@@ -15,7 +15,7 @@ describe ApiKeysController, :vcr do
     subject.current_user.should_not be_nil
   end
 
-  describe "GET index" do
+  describe "GET index", :vcr, record: :once do
     it "assigns all api_keys as @api_keys" do
       api_key = FactoryGirl.create(:api_key)
       get :index, {}

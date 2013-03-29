@@ -19,17 +19,17 @@ http_interactions:
       content-type:
       - application/xml; charset=utf-8
       date:
-      - Fri, 29 Mar 2013 14:57:55 GMT
+      - Fri, 29 Mar 2013 15:06:23 GMT
       content-length:
       - '259'
     body:
       encoding: US-ASCII
       string: ! "<?xml version='1.0' encoding='UTF-8'?>\r\n<eveapi version=\"2\">\r\n
-        \ <currentTime>2013-03-29 14:57:56</currentTime>\r\n  <error code=\"106\">Must
+        \ <currentTime>2013-03-29 15:06:24</currentTime>\r\n  <error code=\"106\">Must
         provide userID or keyID parameter for authentication.</error>\r\n  <cachedUntil>2013-03-30
-        02:57:56</cachedUntil>\r\n</eveapi>"
+        03:06:24</cachedUntil>\r\n</eveapi>"
     http_version: '1.1'
-  recorded_at: Fri, 29 Mar 2013 14:57:56 GMT
+  recorded_at: Fri, 29 Mar 2013 15:06:24 GMT
 - request:
     method: get
     uri: https://api.eveonline.com/char/SkillInTraining.xml.aspx?keyID=MyString&vCode=MyString
@@ -49,15 +49,15 @@ http_interactions:
       content-type:
       - application/xml; charset=utf-8
       date:
-      - Fri, 29 Mar 2013 14:57:57 GMT
+      - Fri, 29 Mar 2013 15:06:24 GMT
       content-length:
       - '259'
     body:
       encoding: US-ASCII
       string: ! "<?xml version='1.0' encoding='UTF-8'?>\r\n<eveapi version=\"2\">\r\n
-        \ <currentTime>2013-03-29 14:57:57</currentTime>\r\n  <error code=\"106\">Must
+        \ <currentTime>2013-03-29 15:06:24</currentTime>\r\n  <error code=\"106\">Must
         provide userID or keyID parameter for authentication.</error>\r\n  <cachedUntil>2013-03-30
-        02:57:57</cachedUntil>\r\n</eveapi>"
+        03:06:24</cachedUntil>\r\n</eveapi>"
     http_version: '1.1'
-  recorded_at: Fri, 29 Mar 2013 14:57:58 GMT
+  recorded_at: Fri, 29 Mar 2013 15:06:25 GMT
 recorded_with: VCR 2.4.0

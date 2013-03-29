@@ -53,19 +53,19 @@ class ApiKey < ActiveRecord::Base
   end
 
   def skill_in_training?
-    api = xml_version(get_api_results_for("SkillInTraining"))
+    api = xml_version(skill_sheet)
     is_skill_in_training(api)
   end
 
   def name_of_skill_in_training
-    api = xml_version(get_api_results_for("SkillInTraining"))
+    api = xml_version(skill_sheet)
     if skill_in_training?
       get_name_of_skill_in_training(api)
     end
   end
 
   def current_skill_training_end_time
-    api = xml_version(get_api_results_for("SkillInTraining"))
+    api = xml_version(skill_sheet)
     if skill_in_training?
       get_skill_training_end_time(api)
     end
