@@ -10,6 +10,7 @@
 #  eve_api_identifier :string(255)
 #  char_sheet         :text(4294967296)
 #  skill_sheet        :text(4294967296)
+#  training_queue     :text(4294967296)
 #
 
 require 'Nokogiri'
